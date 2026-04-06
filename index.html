@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Awe Field — Clinical Protocol for Altered States</title>
+<meta name="description" content="Awe Field is a practitioner-led clinical protocol using sound and music to guide patients into non-ordinary states of consciousness — without substances."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+/* ── NOCTURNAL DEPTH — Final Master ─────────────────────────────────
+   Neuroaesthetics: dark bg eliminates peripheral noise · warm amber
+   activates reward pathways · focus narrows to what glows · depth
+   through translucency layers · gestalt grouping via border contrast
+   ─────────────────────────────────────────────────────────────── */
+:root{
+  --bg:#080B11;
+  --deep:#060810;
+  --surface:rgba(14,17,26,0.90);
+  --panel:rgba(12,15,22,0.94);
+  --text:#E8E0D2;
+  --dim:rgba(232,224,210,0.60);
+  --muted:rgba(232,224,210,0.30);
+  --border:rgba(200,135,100,0.13);
+  --gold:#C8876A;
+  --gold2:#D99A7E;
+  --gold-pale:rgba(200,135,100,0.08);
+  --lilac:#B89FE0;
+  --lilac2:#CDB8F0;
+  --lilac-pale:rgba(184,159,224,0.08);
+  --rose:#D4738A;
+  --r:999px;--rc:18px;
+}
+/* LIGHT THEME — Cosy: warm linen, terracotta, soft lavender */
+body.light{
+  --bg:#F8F2E8;--deep:#EFE6D6;
+  --surface:rgba(255,252,244,0.92);--panel:rgba(254,250,242,0.96);
+  --text:#1A1006;--dim:rgba(26,16,6,0.66);--muted:rgba(26,16,6,0.40);
+  --border:rgba(192,116,72,0.15);
+  --gold:#B86A3E;--gold2:#CC8454;--gold-pale:rgba(184,106,62,0.07);
+  --lilac:#7858B8;--lilac2:#9470CC;--lilac-pale:rgba(120,88,184,0.08);
+  --rose:#C86048;
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M4 2 L18 10 L11 12 L8 19 Z' fill='%23B86A3E' stroke='rgba(26,16,6,0.28)' stroke-width='0.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto;
+}
+body.light::before{background:radial-gradient(ellipse at 50% 50%,rgba(184,106,62,0.06) 0%,transparent 70%);}
+body.light nav.s{background:rgba(251,247,238,0.96);}
+body.light .what-strip{background:rgba(243,236,222,0.97);}
+body.light .for-sec{background:rgba(246,239,226,0.98);}
+body.light .for-item{background:rgba(255,251,242,0.80);}
+body.light .for-item:hover{background:rgba(255,248,236,0.96);}
+body.light .fp-inner{background:rgba(250,243,230,0.98);}
+body.light .proof{background:rgba(244,236,218,0.80);}
+body.light .posbg{background:rgba(241,233,214,0.92);}
+body.light .ctasec{background:linear-gradient(135deg,rgba(248,239,220,1) 0%,rgba(240,228,208,1) 100%);}
+body.light .ctasec::before{background:radial-gradient(ellipse,rgba(184,106,62,0.08) 0%,transparent 70%);}
+body.light .nl-sec{background:rgba(244,236,218,0.98);}
+body.light .pbg{background:rgba(246,238,220,0.97);}
+body.light .mso{background:#F5EDD6;}
+body.light footer{background:rgba(242,233,214,0.94);}
+body.light #mm{background:rgba(250,244,228,0.99);}
+body.light .hm{background:rgba(255,251,240,0.92);}
+body.light .card{background:rgba(255,251,238,0.94);}
+body.light .card:hover{background:rgba(252,245,228,0.98);}
+body.light .mcard{background:rgba(255,251,238,0.92);}
+body.light .step{background:rgba(255,251,238,0.88);}
+body.light .hero-right{background:transparent;}
+body.light #hero-cv{background:transparent;}
+body.light .wp{background:rgba(184,106,62,0.04);border-color:rgba(184,106,62,0.12);}
+body.light .for-item.open{border-color:var(--gold);box-shadow:inset 0 0 0 1px rgba(184,106,62,0.16);}
+body.light .afc,.body.light .licc,.body.light .mugc,.body.light .event-card{background:rgba(255,252,248,0.9);}
+body.light .btn-p{color:#fff;}
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'IBM Plex Sans',sans-serif;font-weight:300;
+  overflow-x:hidden;font-size:15px;line-height:1.78;
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M4 2 L18 10 L11 12 L8 19 Z' fill='%23D4738A' stroke='rgba(232,224,210,0.5)' stroke-width='0.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto;
+}
+body::before{
+  content:'';position:fixed;top:-20%;left:10%;width:80%;height:60%;
+  background:radial-gradient(ellipse at 50% 50%,rgba(200,135,100,0.04) 0%,transparent 70%);
+  pointer-events:none;z-index:0;
+}
+nav,main,footer{position:relative;z-index:2;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:18px 56px;transition:background .5s,border-color .5s;}
+nav.s{background:rgba(8,11,17,0.94);border-bottom:1px solid var(--border);backdrop-filter:blur(28px);}
+
+/* ── LOGO — Awe (capital A) with fixed spiral + traveling bead ── */
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo-lock{display:flex;align-items:center;gap:6px;line-height:1;}
+.awe-wrap{position:relative;display:inline-flex;align-items:center;justify-content:center;}
+#awe-cv,#footer-awe-cv{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+.awe-text{font-family:'Playfair Display',serif;font-size:18px;font-weight:400;letter-spacing:.06em;color:var(--gold);position:relative;z-index:1;}
+.logo-field{font-family:'Playfair Display',serif;font-size:18px;font-weight:400;letter-spacing:.04em;font-style:italic;color:var(--muted);}
+
+.nl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);background:none;border:none;padding:8px 14px;border-radius:var(--r);cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M4 2 L18 10 L11 12 L8 19 Z' fill='%23D4738A' stroke='rgba(232,224,210,0.5)' stroke-width='0.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2,pointer;transition:color .22s,background .22s;}
+.nl:hover,.nl.at{color:var(--text);background:rgba(232,224,210,0.05);}
+.nl.at{color:var(--gold);}
+.nl-cta{color:var(--bg)!important;background:var(--gold)!important;margin-left:10px;box-shadow:0 2px 16px rgba(200,135,100,0.28);transition:background .22s,transform .18s!important;}
+.nl-cta:hover{background:var(--gold2)!important;transform:translateY(-1px);}
+.nav-links{display:flex;align-items:center;gap:2px;}
+.mob-btn{display:none;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--border);padding:8px 15px;border-radius:var(--r);}
+.theme-toggle{
+  width:34px;height:34px;border-radius:50%;
+  border:1px solid var(--border);background:var(--gold-pale);
+  color:var(--gold);font-size:15px;
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M4 2 L18 10 L11 12 L8 19 Z' fill='%23D4738A' stroke='rgba(232,224,210,0.5)' stroke-width='0.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2,pointer;
+  transition:all .25s;display:flex;align-items:center;justify-content:center;
+  margin-left:8px;flex-shrink:0;
+}
+.theme-toggle:hover{background:var(--gold-pale);border-color:var(--gold);transform:scale(1.08);}
+.lang-toggle{
+  font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;
+  width:34px;height:34px;border-radius:50%;
+  border:1px solid var(--border);background:var(--gold-pale);
+  color:var(--gold);
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M4 2 L18 10 L11 12 L8 19 Z' fill='%23D4738A' stroke='rgba(232,224,210,0.5)' stroke-width='0.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2,pointer;
+  transition:all .25s;display:flex;align-items:center;justify-content:center;
+  margin-left:4px;flex-shrink:0;font-weight:400;
+}
+.lang-toggle:hover{background:var(--gold-pale);border-color:var(--gold);transform:scale(1.08);}
+
+
+
+/* ── VIEWS ── */
+.view{display:none;}.view.active{display:block;animation:fadeUp .45s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── BUTTONS ── */
+.btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;border-radius:var(--r);padding:14px 36px;display:inline-flex;align-items:center;border:none;cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M4 2 L18 10 L11 12 L8 19 Z' fill='%23D4738A' stroke='rgba(232,224,210,0.5)' stroke-width='0.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2,pointer;transition:all .28s ease;text-decoration:none;}
+.btn-p{color:var(--bg);background:var(--gold);box-shadow:0 2px 20px rgba(200,135,100,0.24);}
+.btn-p:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 4px 28px rgba(200,135,100,0.36);}
+.btn-g{color:var(--gold);background:transparent;border:1px solid rgba(200,135,100,0.38);}
+.btn-g:hover{background:var(--gold-pale);border-color:var(--gold);transform:translateY(-2px);}
+body.light .btn-g{color:var(--gold);background:var(--gold-pale);border:1px solid rgba(184,106,62,0.30);}
+body.light .btn-g:hover{background:rgba(184,106,62,0.12);border-color:var(--gold);}
+.btn-sm{padding:10px 22px;font-size:9px;}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;padding:0 56px;position:relative;overflow:hidden;}
+.hero-left{flex:1;display:flex;flex-direction:column;justify-content:center;padding:120px 0 80px;max-width:560px;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;opacity:0;animation:fadeUp .9s ease .3s forwards;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold);}
+.hero-title{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(34px,4.2vw,64px);line-height:.98;letter-spacing:-.02em;color:var(--text);opacity:0;animation:fadeUp 1.2s ease .5s forwards;}
+.hero-title em{font-style:italic;color:var(--gold2);display:block;}
+.hero-state{margin-top:18px;font-family:'Playfair Display',serif;font-size:clamp(14px,1.4vw,18px);font-style:italic;line-height:1.65;color:var(--dim);max-width:480px;opacity:0;animation:fadeUp 1s ease .68s forwards;border-left:2px solid rgba(200,135,100,0.3);padding-left:18px;}
+.hero-body{margin-top:18px;font-size:15px;line-height:1.84;color:var(--muted);max-width:440px;opacity:0;animation:fadeUp 1s ease .82s forwards;}
+.hero-metrics{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;opacity:0;animation:fadeUp .9s ease 1s forwards;}
+.hm{background:var(--surface);border:1px solid var(--border);border-radius:var(--rc);padding:17px 16px;backdrop-filter:blur(12px);}
+.hmn{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;color:var(--gold);line-height:1.1;margin-bottom:5px;}
+.hml{font-size:12px;color:var(--muted);line-height:1.55;}
+.hero-actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:fadeUp .9s ease 1.15s forwards;}
+.hero-right{flex:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:70vh;}
+#hero-cv{position:absolute;inset:0;width:100%;height:100%;}
+.hero-badge{position:absolute;bottom:28px;right:0;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);opacity:.28;}
+
+/* ── WHAT IS AWE FIELD — two-column side listing ── */
+.what-strip{
+  background:rgba(14,12,20,0.96);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:80px 56px;
+}
+.what-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.what-label{
+  font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:16px;
+  display:flex;align-items:center;gap:10px;
+}
+.what-label::before{content:'';width:18px;height:1px;background:var(--gold);}
+.what-title{
+  font-family:'Playfair Display',serif;font-weight:400;
+  font-size:clamp(28px,3.4vw,46px);line-height:1.06;color:var(--text);
+}
+.what-title em{font-style:italic;color:var(--gold2);}
+.what-body{font-size:16px;line-height:1.84;color:var(--dim);margin-top:14px;}
+.what-pillars{display:flex;flex-direction:column;gap:14px;}
+.wp{
+  display:flex;gap:18px;align-items:flex-start;
+  padding:20px 22px;border-radius:var(--rc);
+  border:1px solid rgba(200,135,100,0.1);
+  background:rgba(200,135,100,0.03);
+  transition:background .3s,border-color .3s;
+}
+.wp:hover{background:rgba(200,135,100,0.07);border-color:rgba(200,135,100,0.22);}
+.wp-num{
+  font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;
+  color:var(--gold);flex-shrink:0;padding-top:1px;
+}
+.wp-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;color:var(--text);margin-bottom:5px;}
+.wp-body{font-size:14px;line-height:1.78;color:var(--dim);}
+
+/* ── WHO IS THIS FOR — interactive expandable cards ── */
+.for-sec{background:rgba(10,8,16,0.98);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:88px 56px;}
+.for-inner{max-width:1280px;margin:0 auto;}
+.for-list{border:1px solid var(--border);border-radius:var(--rc);overflow:hidden;max-width:760px;margin:40px auto 0;}
+.for-item{
+  padding:18px 26px;border-bottom:1px solid var(--border);
+  background:rgba(14,17,26,0.5);
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M4 2 L18 10 L11 12 L8 19 Z' fill='%23D4738A' stroke='rgba(232,224,210,0.5)' stroke-width='0.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2,pointer;
+  transition:background .22s,border-color .22s;
+}
+.for-item:last-child{border-bottom:none;}
+.for-item:hover{background:rgba(20,24,36,0.85);}
+.for-item.open{background:rgba(20,24,36,0.95);border-bottom-color:var(--gold);}
+.for-item-l{display:flex;align-items:center;gap:16px;}
+.for-item-icon{font-size:16px;opacity:0.75;flex-shrink:0;}
+.for-item-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:400;color:var(--text);}
+.for-item-hint{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);opacity:.7;white-space:nowrap;flex-shrink:0;transition:opacity .2s;}
+.for-item.open .for-item-hint{opacity:1;}
+
+/* Inline detail panel — expands under each item */
+.for-detail{
+  overflow:hidden;max-height:0;
+  transition:max-height .58s cubic-bezier(.4,0,.2,1),opacity .42s ease;
+  opacity:0;
+}
+.fp-inner{
+  padding:32px 36px 28px;
+  border-top:1px solid var(--border);
+  background:rgba(8,6,14,0.98);backdrop-filter:blur(20px);
+  display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;
+}
+.fp-icon{font-size:28px;margin-bottom:10px;opacity:.9;}
+.fp-title{font-family:'Playfair Display',serif;font-size:clamp(18px,2.2vw,26px);font-weight:400;color:var(--text);margin-bottom:12px;line-height:1.1;}
+.fp-body{font-size:15px;line-height:1.86;color:var(--dim);margin-bottom:16px;}
+.fp-callout{
+  font-family:'Playfair Display',serif;font-size:17px;font-style:italic;
+  color:var(--gold2);line-height:1.62;margin-bottom:24px;
+  padding:20px 24px;border-left:2px solid rgba(200,135,100,0.4);
+  background:rgba(200,135,100,0.04);border-radius:0 var(--rc) var(--rc) 0;
+}
+.fp-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.fp-close{margin-top:20px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M4 2 L18 10 L11 12 L8 19 Z' fill='%23D4738A' stroke='rgba(232,224,210,0.5)' stroke-width='0.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2,pointer;transition:color .2s;}
+.fp-close:hover{color:var(--text);}
+
+/* ── PROOF ── */
+.proof{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(8,11,17,0.72);backdrop-filter:blur(20px);}
+.prc{padding:28px 22px;border-right:1px solid var(--border);text-align:center;}.prc:last-child{border-right:none;}
+.prn{font-family:'Playfair Display',serif;font-size:38px;font-weight:400;color:var(--gold);line-height:1;}
+.prl{font-size:13px;color:var(--muted);line-height:1.6;margin-top:7px;}
+.prc2{font-family:'DM Mono',monospace;font-size:8px;color:rgba(200,135,100,0.3);letter-spacing:.1em;margin-top:5px;}
+
+/* ── SECTIONS ── */
+.sec{padding:88px 56px;max-width:1280px;margin:0 auto;}
+.sl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:13px;display:flex;align-items:center;gap:10px;}
+.sl::before{content:'';width:18px;height:1px;background:var(--gold);}
+.sh{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(26px,3.2vw,46px);line-height:1.08;color:var(--text);}
+.sh em{font-style:italic;color:var(--gold2);}
+.ss{margin-top:13px;font-size:16px;line-height:1.82;color:var(--dim);max-width:540px;}
+
+/* ── CARDS ── */
+.cg{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rc);padding:40px 36px;position:relative;overflow:hidden;transition:background .3s,border-color .35s,transform .35s;backdrop-filter:blur(8px);}
+.card:hover{background:rgba(18,21,32,0.96);border-color:rgba(200,135,100,0.24);transform:translateY(-4px);}
+.card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--gold2),var(--lilac));opacity:0;transition:opacity .4s;}
+.card:hover::before{opacity:1;}
+.cn{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;color:var(--muted);margin-bottom:13px;}
+.ct{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;color:var(--text);margin-bottom:11px;line-height:1.2;}
+.ct em{font-style:italic;color:var(--gold2);}
+.cb{font-size:14px;line-height:1.88;color:var(--dim);}
+.tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:7px;}
+.tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,135,100,0.26);padding:4px 12px;border-radius:var(--r);}
+.maxim{margin-top:28px;font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--dim);text-align:center;padding:24px 32px;border:1px solid var(--border);border-radius:var(--rc);background:rgba(200,135,100,0.03);backdrop-filter:blur(8px);}
+
+/* ── MEASUREMENT ── */
+.mso{position:relative;overflow:hidden;background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+#mcv{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.55;}
+.msi{position:relative;z-index:1;padding:88px 56px;max-width:1280px;margin:0 auto;}
+.mgd{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.mcard{background:rgba(14,17,26,0.9);border:1px solid var(--border);border-radius:var(--rc);padding:36px 28px;transition:border-color .3s,transform .3s;backdrop-filter:blur(8px);}
+.mcard:hover{border-color:rgba(200,135,100,0.28);transform:translateY(-3px);}
+.mbadge{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;color:var(--gold);border:1px solid rgba(200,135,100,0.28);padding:4px 12px;border-radius:var(--r);margin-bottom:14px;}
+.mtitle{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;color:var(--text);margin-bottom:9px;}
+.mbody{font-size:14px;line-height:1.85;color:var(--dim);}
+.mref{margin-top:12px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;color:rgba(200,135,100,0.32);line-height:1.6;}
+
+/* ── WHY AWE FIELD ── */
+.posbg{padding:88px 56px;background:rgba(10,13,20,0.9);border-top:1px solid var(--border);}
+.posinn{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.posb{font-size:16px;line-height:1.82;color:var(--dim);margin-top:14px;}
+.ptbl{width:100%;border-collapse:collapse;}
+.ptbl th{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:11px 14px;text-align:left;border-bottom:1px solid var(--border);}
+.ptbl td{font-size:13px;color:var(--dim);padding:12px 14px;border-bottom:1px solid var(--border);}
+.ptbl td:first-child{color:var(--text);}
+.ptbl tr:last-child td{border-bottom:none;}
+.ck{color:var(--gold);}.cx{color:var(--muted);}
+
+/* ── THE MECHANISM — ALTERED STATES ── */
+.manifesto{padding:88px 56px;max-width:900px;margin:0 auto;text-align:center;}
+.mf-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;justify-content:center;gap:10px;}
+.mf-label::before,.mf-label::after{content:'';width:28px;height:1px;background:var(--gold);}
+.mf-title{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(28px,3.8vw,54px);line-height:1.06;color:var(--text);margin-bottom:24px;}
+.mf-title em{font-style:italic;color:var(--gold2);}
+.mf-body{font-size:17px;line-height:1.88;color:var(--dim);margin-bottom:16px;}
+.mf-body strong{color:var(--text);font-weight:400;}
+.mf-divider{width:40px;height:1px;background:var(--gold);margin:28px auto;}
+
+/* ── FOUNDING COHORT CTA ── */
+.ctasec{padding:120px 56px;text-align:center;background:linear-gradient(135deg,rgba(8,11,17,1) 0%,rgba(14,12,22,1) 100%);border-top:1px solid var(--border);position:relative;overflow:hidden;}
+.ctasec::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(ellipse,rgba(200,135,100,0.05) 0%,transparent 70%);pointer-events:none;}
+.ctaw{position:relative;z-index:2;max-width:640px;margin:0 auto;}
+.ctabl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:10px;}
+.ctabl::before,.ctabl::after{content:'';width:18px;height:1px;background:var(--gold);}
+.ctah{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(30px,4.2vw,56px);line-height:1.05;color:var(--text);margin-bottom:14px;}
+.ctah em{font-style:italic;color:var(--gold2);}
+.ctap{font-size:16px;color:var(--dim);margin:0 auto 20px;line-height:1.84;max-width:520px;}
+.ctabls{text-align:left;max-width:400px;margin:0 auto 32px;display:flex;flex-direction:column;gap:9px;}
+.ctabi{display:flex;align-items:baseline;gap:10px;font-size:14px;color:var(--dim);}
+.ctabi::before{content:'→';color:var(--gold);font-size:10px;flex-shrink:0;}
+.ctar{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.ctan{margin-top:16px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);}
+
+/* ── NEWSLETTER ── */
+.nl-sec{background:rgba(6,8,14,0.98);border-top:1px solid var(--border);padding:80px 56px;text-align:center;}
+.nl-inner{max-width:560px;margin:0 auto;}
+.nl-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:10px;}
+.nl-label::before,.nl-label::after{content:'';width:14px;height:1px;background:var(--gold);}
+.nl-title{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(22px,3vw,36px);color:var(--text);margin-bottom:10px;}
+.nl-title em{font-style:italic;color:var(--gold2);}
+.nl-sub{font-size:15px;color:var(--dim);margin-bottom:28px;line-height:1.78;}
+.nl-form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+.nl-input{flex:1;min-width:240px;max-width:340px;background:rgba(14,17,26,0.88);border:1px solid var(--border);color:var(--text);font-family:'IBM Plex Sans',sans-serif;font-size:14px;padding:13px 18px;border-radius:var(--r);outline:none;transition:border-color .25s;-webkit-appearance:none;}
+.nl-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,135,100,0.1);}
+.nl-input::placeholder{color:var(--muted);}
+.nl-note{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:14px;}
+
+/* ── PROTOCOL BG ── */
+.pbg{background:rgba(6,8,14,0.96);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:92px 56px;}
+.pi{max-width:1280px;margin:0 auto;}
+.sg{margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.step{background:rgba(14,17,26,0.8);border:1px solid var(--border);border-radius:var(--rc);padding:36px 32px;transition:background .3s,border-color .3s,transform .3s;backdrop-filter:blur(6px);}
+.step:hover{background:rgba(20,24,36,0.95);border-color:rgba(200,135,100,0.22);transform:translateY(-3px);}
+.step.full{grid-column:1/-1;}
+.sn{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;color:var(--gold);margin-bottom:13px;display:flex;align-items:center;gap:10px;}
+.sn::after{content:'';flex:1;height:1px;background:rgba(200,135,100,0.1);}
+.st{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;color:var(--text);margin-bottom:9px;line-height:1.15;}
+.st em{font-style:italic;color:var(--gold2);}
+.sb{font-size:14px;line-height:1.88;color:var(--dim);}
+.sd{margin-top:12px;display:flex;flex-direction:column;gap:6px;}
+.detail{display:flex;align-items:baseline;gap:9px;font-size:13px;color:var(--muted);}
+.detail::before{content:'→';color:var(--gold);font-size:9px;flex-shrink:0;}
+
+/* ── TAB PAGES ── */
+.tp{padding:92px 56px 80px;max-width:1280px;margin:0 auto;}
+.tph{padding-bottom:40px;border-bottom:1px solid var(--border);margin-bottom:48px;}
+.fwrap{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:start;margin-top:28px;}
+.fid{display:flex;flex-direction:column;gap:8px;min-width:190px;}
+.fid .fn{font-family:'Playfair Display',serif;font-size:28px;font-weight:400;font-style:italic;color:var(--text);}
+.fid .fr{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.fid a{display:inline-flex;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid rgba(200,135,100,0.3);padding:8px 18px;border-radius:var(--r);transition:background .3s;}
+.fid a:hover{background:var(--gold-pale);}
+.fbio{font-size:16px;line-height:1.88;color:var(--dim);}
+.adivider{border:none;border-top:1px solid var(--border);margin:52px 0;}
+.afg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px;}
+.afc{background:var(--surface);border:1px solid var(--border);border-radius:var(--rc);padding:34px 26px;transition:border-color .3s,transform .3s;backdrop-filter:blur(6px);}
+.afc:hover{border-color:rgba(200,135,100,0.28);transform:translateY(-3px);}
+.afc .an{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;color:var(--text);margin-bottom:4px;}
+.afc .ar{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.afc .ab{font-size:14px;line-height:1.85;color:var(--dim);}
+.a2c{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:28px;}
+.acl h3{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(22px,2.5vw,34px);color:var(--text);margin-bottom:12px;}
+.acl h3 em{font-style:italic;color:var(--gold2);}
+.acl p{font-size:14px;line-height:1.85;color:var(--dim);margin-bottom:10px;}
+.alist{display:flex;flex-direction:column;gap:7px;margin-top:6px;}
+.ali{display:flex;align-items:baseline;gap:10px;font-size:14px;color:var(--dim);}
+.ali::before{content:'→';color:var(--gold);font-size:10px;flex-shrink:0;}
+.mugrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px;}
+.mugc{background:var(--surface);border:1px solid var(--border);border-radius:var(--rc);padding:30px 24px;transition:border-color .3s,transform .3s;backdrop-filter:blur(6px);}
+.mugc:hover{border-color:rgba(200,135,100,0.24);transform:translateY(-3px);}
+.mugc h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:400;color:var(--text);margin-bottom:8px;}
+.mugc p{font-size:14px;line-height:1.85;color:var(--dim);}
+.artbox{margin-top:44px;padding:40px 44px;border:1px solid var(--border);border-radius:var(--rc);background:rgba(14,17,26,0.8);backdrop-filter:blur(10px);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+.artbox h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:300;color:var(--text);line-height:1.15;}
+.artbox h3 em{font-style:italic;color:var(--gold2);}
+.artbox p{font-size:14px;line-height:1.82;color:var(--dim);margin-bottom:12px;}
+.tgl{font-family:'Playfair Display',serif;font-size:17px;font-style:italic;color:var(--gold2);margin-top:14px;}
+.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px;}
+.licc{background:var(--surface);border:1px solid var(--border);border-radius:var(--rc);padding:34px 26px;transition:border-color .3s,transform .3s;backdrop-filter:blur(6px);}
+.licc:hover{border-color:rgba(200,135,100,0.26);transform:translateY(-3px);}
+.licc h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;color:var(--text);margin-bottom:10px;}
+.licc h3 em{font-style:italic;color:var(--gold2);}
+.licc p{font-size:14px;line-height:1.85;color:var(--dim);}
+.licl{margin-top:12px;display:flex;flex-direction:column;gap:6px;}
+.licli{display:flex;align-items:baseline;gap:9px;font-size:13px;color:var(--muted);}
+.licli::before{content:'→';color:var(--gold);font-size:10px;}
+.eab{margin-top:28px;padding:34px 38px;border:1px solid rgba(200,135,100,0.28);border-radius:var(--rc);background:var(--gold-pale);backdrop-filter:blur(10px);}
+.eah{font-family:'Playfair Display',serif;font-size:24px;font-weight:400;color:var(--text);margin-bottom:8px;}
+.eah em{font-style:italic;color:var(--gold2);}
+.eap{font-size:15px;line-height:1.82;color:var(--dim);margin-bottom:14px;}
+.eal{display:flex;flex-direction:column;gap:7px;margin-bottom:20px;}
+.eali{display:flex;align-items:baseline;gap:10px;font-size:14px;color:var(--dim);}
+.eali::before{content:'→';color:var(--gold);font-size:10px;}
+.pdfb{margin-top:22px;border:1px solid var(--border);border-radius:var(--rc);padding:34px 38px;background:var(--surface);backdrop-filter:blur(6px);}
+.pdfb h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;color:var(--text);margin-bottom:14px;}
+.pdfl{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;}
+.pdfli{display:flex;align-items:baseline;gap:10px;font-size:14px;color:var(--dim);}
+.pdfli::before{content:'→';color:var(--gold);font-size:10px;}
+.pdflk{display:flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);border-radius:var(--r);padding:8px 16px;margin-bottom:14px;}
+.events-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px;}
+.event-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rc);padding:32px 30px;backdrop-filter:blur(8px);transition:border-color .3s,transform .3s;}
+.event-card:hover{border-color:rgba(200,135,100,0.28);transform:translateY(-2px);}
+.event-date{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);margin-bottom:10px;}
+.event-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;color:var(--text);margin-bottom:8px;}
+.event-loc{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+.event-body{font-size:14px;line-height:1.82;color:var(--dim);margin-top:10px;}
+.cgrid{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;margin-top:40px;align-items:start;}
+.cinf p{font-size:16px;line-height:1.82;color:var(--dim);margin-bottom:18px;}
+.cwho{display:flex;flex-direction:column;gap:8px;margin-bottom:26px;}
+.cwhi{display:flex;align-items:baseline;gap:10px;font-size:14px;color:var(--dim);}
+.cwhi::before{content:'→';color:var(--gold);font-size:10px;}
+.cdet{display:flex;flex-direction:column;gap:12px;}
+.cdrow{display:flex;flex-direction:column;gap:3px;}
+.cdl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+.cdv{font-size:14px;color:var(--dim);}
+.cform{display:flex;flex-direction:column;gap:13px;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+.ff{display:flex;flex-direction:column;gap:6px;}
+.ff label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+.ff input,.ff select,.ff textarea{background:rgba(14,17,26,0.88);border:1px solid var(--border);color:var(--text);font-family:'IBM Plex Sans',sans-serif;font-size:14px;padding:12px 16px;width:100%;outline:none;border-radius:13px;transition:border-color .25s;-webkit-appearance:none;backdrop-filter:blur(6px);}
+.ff input:focus,.ff select:focus,.ff textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,135,100,0.1);}
+.ff select option{background:#0D1018;color:var(--text);}
+.ff textarea{resize:vertical;min-height:108px;line-height:1.6;}
+footer{padding:26px 56px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:rgba(6,8,14,0.88);backdrop-filter:blur(20px);}
+.ftl{display:flex;align-items:center;gap:10px;}
+.ftn{font-family:'Playfair Display',serif;font-size:15px;color:var(--muted);}
+.ftt{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);opacity:.55;}
+.ftlinks{display:flex;gap:3px;flex-wrap:wrap;}
+.ftlinks button{font-size:12px;color:var(--muted);background:none;border:none;cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M4 2 L18 10 L11 12 L8 19 Z' fill='%23D4738A' stroke='rgba(232,224,210,0.5)' stroke-width='0.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2,pointer;letter-spacing:.06em;transition:color .22s;padding:6px 12px;border-radius:var(--r);}
+.ftlinks button:hover{color:var(--dim);background:rgba(232,224,210,0.04);}
+.ftc{font-family:'DM Mono',monospace;font-size:8px;color:var(--muted);opacity:.4;}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .85s ease,transform .85s ease;}
+.reveal.vis{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s;}.d2{transition-delay:.22s;}.d3{transition-delay:.34s;}.d4{transition-delay:.46s;}
+.mc3s{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px;}
+.mc3{background:rgba(14,17,26,0.8);border:1px solid var(--border);border-radius:var(--rc);padding:22px 20px;backdrop-filter:blur(6px);}
+.mc3 .arr{font-family:'DM Mono',monospace;font-size:9px;color:var(--gold);margin-bottom:8px;}
+.mc3 p{font-size:14px;line-height:1.82;color:var(--dim);}
+
+/* ── BACK BUTTON ── */
+.back-bar{padding:80px 0 0;margin-bottom:-10px;}
+.back-btn{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--border);padding:8px 20px;border-radius:var(--r);cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M4 2 L18 10 L11 12 L8 19 Z' fill='%23D4738A' stroke='rgba(232,224,210,0.5)' stroke-width='0.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2,pointer;transition:color .22s,border-color .22s;}
+.back-btn:hover{color:var(--gold);border-color:var(--gold);}
+
+/* ── SCROLL-TO-TOP ── */
+#scroll-top{position:fixed;bottom:32px;right:32px;z-index:300;width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--bg);border:none;font-size:18px;font-weight:300;line-height:1;opacity:0;transform:translateY(14px);transition:opacity .32s,transform .32s,background .22s;cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M4 2 L18 10 L11 12 L8 19 Z' fill='%23D4738A' stroke='rgba(232,224,210,0.5)' stroke-width='0.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2,pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.22);}
+#scroll-top.vis{opacity:0.88;transform:translateY(0);}
+#scroll-top:hover{opacity:1;background:var(--gold2);}
+
+/* ── HOME BUTTON ── */
+.home-btn{padding:8px 12px;display:inline-flex;align-items:center;justify-content:center;}
+.home-btn svg{display:block;}
+
+/* ── INDICATIONS ACCORDION ── */
+.ind-card{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M4 2 L18 10 L11 12 L8 19 Z' fill='%23D4738A' stroke='rgba(232,224,210,0.5)' stroke-width='0.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2,pointer;user-select:none;}
+.ind-body{max-height:0;overflow:hidden;opacity:0;transition:max-height .48s cubic-bezier(.4,0,.2,1),opacity .36s ease;}
+.ind-hint{display:block;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);opacity:.65;margin-top:14px;transition:opacity .2s;}
+.ind-card.open .ind-hint{opacity:1;}
+.ind-card.open{border-color:rgba(200,135,100,0.28);}
+body.light .ind-card.open{border-color:rgba(184,106,62,0.32);}
+
+@media(max-width:1060px){
+  nav{padding:13px 20px;}.nav-links{display:none;}.mob-btn{display:block;}
+  .hero{flex-direction:column;padding:0 20px;}.hero-left{padding:96px 0 36px;max-width:100%;}.hero-right{display:none;}
+  .hero-metrics,.proof,.sg,.mgd,.posinn,.afg,.a2c,.mugrid,.lgrid,.cgrid,.mc3s,.artbox,.fwrap,.for-grid,.events-grid{grid-template-columns:1fr;}
+  .cg,.proof{grid-template-columns:1fr 1fr;}
+  .sec,.msi,.pbg,.posbg,.ctasec,.for-sec,.manifesto,.nl-sec,.what-strip{padding:64px 20px;}
+  .what-inner{grid-template-columns:1fr;gap:40px;}
+  .tp{padding:64px 20px;}
+  footer{padding:20px;flex-direction:column;align-items:flex-start;}
+  .frow{grid-template-columns:1fr;}
+  .nl-form{flex-direction:column;align-items:stretch;}
+  .nl-input{max-width:100%;}
+  .fp-inner{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#" class="logo" onclick="sv('home');return false;">
+    <div class="logo-lock">
+      <div class="awe-wrap">
+        <canvas id="awe-cv" width="96" height="50"></canvas>
+        <span class="awe-text">Awe</span>
+      </div>
+      <span class="logo-field">Field</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <button class="nl home-btn" onclick="sv('home',this)" title="Home"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6L7 1L13 6V12.5H9.5V8.5H4.5V12.5H1V6Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" fill="none"/></svg></button>
+    <button class="nl at" onclick="sv('protocol',this)">Protocol</button>
+    <button class="nl" onclick="sv('about',this)">About</button>
+    <button class="nl" onclick="sv('science',this)">Science</button>
+    <button class="nl" onclick="sv('music',this)">Music</button>
+    <button class="nl" onclick="sv('licensing',this)">Licensing</button>
+    <button class="nl" onclick="sv('events',this)">Events</button>
+    <button class="nl nl-cta" onclick="sv('contact',this)">Contact</button>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Switch theme"><span id="theme-icon">☀</span></button>
+    <button class="lang-toggle" id="lang-btn" onclick="toggleLang()" title="Traducir al español">ES</button>
+  </div>
+  <button class="mob-btn" onclick="toggleMob()">Menu</button>
+</nav>
+<div id="mm" style="display:none;position:fixed;top:57px;left:0;right:0;z-index:190;background:rgba(8,11,17,0.98);border-bottom:1px solid var(--border);flex-direction:column;padding:12px 20px;gap:3px;backdrop-filter:blur(24px);">
+  <button class="nl" style="text-align:left;" onclick="sv('protocol');toggleMob()">Protocol</button>
+  <button class="nl" style="text-align:left;" onclick="sv('about');toggleMob()">About</button>
+  <button class="nl" style="text-align:left;" onclick="sv('science');toggleMob()">Science</button>
+  <button class="nl" style="text-align:left;" onclick="sv('music');toggleMob()">Music</button>
+  <button class="nl" style="text-align:left;" onclick="sv('licensing');toggleMob()">Licensing</button>
+  <button class="nl" style="text-align:left;" onclick="sv('events');toggleMob()">Events</button>
+  <button class="nl" style="text-align:left;" onclick="sv('contact');toggleMob()">Contact</button>
+</div>
+
+<main>
+<div class="view active" id="view-home">
+
+  <!-- 1 · HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow"><span id="i18n-hero-eyebrow">Evidence-based acoustic therapy protocol</span></div>
+      <h1 class="hero-title"><span id="i18n-hero-title">Access the altered state.<br/><em>Without substances.</em></span></h1>
+      <p class="hero-state" data-i18n="hero-state">"The altered state is not a side effect — it is the mechanism. Every breakthrough, every integration, every transformation happens there."</p>
+      <p class="hero-body" data-i18n="hero-body">Awe Field is a practitioner-led protocol using sound and music to induce non-ordinary states of consciousness — a clinically structured preparation pathway for psychedelic-assisted therapy, and a standalone intervention for PTSD, anxiety, and depression.</p>
+      <div class="hero-metrics">
+        <div class="hm"><div class="hmn" data-i18n="hm1-n">Personalised</div><div class="hml" data-i18n="hm1-l">By trait, resilience &amp; therapeutic goal</div></div>
+        <div class="hm"><div class="hmn" data-i18n="hm2-n">Real-Time HRV</div><div class="hml" data-i18n="hm2-l">Adaptive sonic modulation per session</div></div>
+        <div class="hm"><div class="hmn" data-i18n="hm3-n">Measurable</div><div class="hml" data-i18n="hm3-l">Clinical outcomes you can document</div></div>
+      </div>
+      <div class="hero-actions">
+        <button class="btn btn-p" onclick="sv('contact')" data-i18n="hero-btn1">Request Clinical Demo</button>
+        <button class="btn btn-g" onclick="sv('protocol')" data-i18n="hero-btn2">View Protocol</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <canvas id="hero-cv"></canvas>
+      <div class="hero-badge" data-i18n="hero-badge">Awe Field · Safety-First · GDPR Compliant</div>
+    </div>
+  </section>
+
+  <!-- 2 · WHAT IS AWE FIELD — two-column side listing -->
+  <div class="what-strip">
+    <div class="what-inner">
+      <div>
+        <div class="what-label"><span id="i18n-what-label">What is Awe Field?</span></div>
+        <h2 class="what-title" data-i18n="what-title">A structured clinical<br/>protocol for<br/><em>altered states</em></h2>
+        <p class="what-body" data-i18n="what-body">Awe Field bridges the gap between talk therapy and psychedelic-assisted treatment — using sound, music, and biofeedback to guide patients through non-ordinary states of consciousness in a fully practitioner-controlled environment.<br/><br/>Not an experience. A clinical tool — built for the practitioners working at the frontier of mental health.</p>
+      </div>
+      <div class="what-pillars">
+        <div class="wp"><div class="wp-num">01</div><div><div class="wp-title" data-i18n="wp1-title">Safe &amp; Substance-Free</div><div class="wp-body" data-i18n="wp1-body">Accesses depth-oriented altered states without pharmacological intervention, fully guided by the clinician at every step. No contraindications, no regulatory barriers.</div></div></div>
+        <div class="wp"><div class="wp-num">02</div><div><div class="wp-title" data-i18n="wp2-title">Clinically Measurable</div><div class="wp-body" data-i18n="wp2-body">HRV monitoring, validated resilience scales, and language pattern analysis generate outcomes you can document, defend, and report to insurers and institutions.</div></div></div>
+        <div class="wp"><div class="wp-num">03</div><div><div class="wp-title" data-i18n="wp3-title">Preparation &amp; Integration</div><div class="wp-body" data-i18n="wp3-body">A powerful standalone intervention and the ideal preparation and integration pathway for psychedelic-assisted therapy — extending the therapeutic window before and after each session.</div></div></div>
+        <div class="wp"><div class="wp-num">04</div><div><div class="wp-title" data-i18n="wp4-title">Practitioner-Led</div><div class="wp-body" data-i18n="wp4-body">You remain in control of every aspect of the session — depth, pacing, and closure. The protocol adapts to your client, not the other way around.</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 · WHO IS THIS FOR — interactive expandable cards -->
+  <div class="for-sec">
+    <div class="for-inner">
+      <p class="sl reveal" style="justify-content:center;margin-bottom:6px;"><span id="i18n-for-label">Designed for</span></p>
+      <h2 class="sh reveal" style="text-align:center;margin-bottom:8px;"><span id="i18n-for-title">Who practises with Awe Field</span></h2>
+      <p class="ss reveal" style="max-width:580px;margin:0 auto;text-align:center;" data-i18n="for-sub">From clinical psychiatry to ceremony facilitation — built for every practitioner working at the edge of consciousness and healing. Select your practice to explore how Awe Field fits.</p>
+      <div class="for-list" id="for-grid">
+  <div class="for-item reveal" onclick="showFor(0)">
+    <div class="for-item-l"><span class="for-item-icon">⚕</span><span class="for-item-title" data-i18n="for-item-0">Psychotherapists &amp; Psychiatrists</span></div>
+    <span class="for-item-hint">Expand →</span>
+  </div>
+  <div class="for-detail" id="for-detail-0"></div>
+  <div class="for-item reveal d1" onclick="showFor(1)">
+    <div class="for-item-l"><span class="for-item-icon">◈</span><span class="for-item-title" data-i18n="for-item-1">Psychedelic Medicine Providers</span></div>
+    <span class="for-item-hint">Expand →</span>
+  </div>
+  <div class="for-detail" id="for-detail-1"></div>
+  <div class="for-item reveal d2" onclick="showFor(2)">
+    <div class="for-item-l"><span class="for-item-icon">◯</span><span class="for-item-title" data-i18n="for-item-2">Retreat &amp; Ceremony Facilitators</span></div>
+    <span class="for-item-hint">Expand →</span>
+  </div>
+  <div class="for-detail" id="for-detail-2"></div>
+  <div class="for-item reveal d3" onclick="showFor(3)">
+    <div class="for-item-l"><span class="for-item-icon">◇</span><span class="for-item-title" data-i18n="for-item-3">Wellness &amp; Integrative Practitioners</span></div>
+    <span class="for-item-hint">Expand →</span>
+  </div>
+  <div class="for-detail" id="for-detail-3"></div>
+  <div class="for-item reveal d1" onclick="showFor(4)">
+    <div class="for-item-l"><span class="for-item-icon">⊕</span><span class="for-item-title" data-i18n="for-item-4">NHS &amp; Community Mental Health</span></div>
+    <span class="for-item-hint">Expand →</span>
+  </div>
+  <div class="for-detail" id="for-detail-4"></div>
+  <div class="for-item reveal d2" onclick="showFor(5)">
+    <div class="for-item-l"><span class="for-item-icon">∿</span><span class="for-item-title" data-i18n="for-item-5">Consciousness Researchers</span></div>
+    <span class="for-item-hint">Expand →</span>
+  </div>
+  <div class="for-detail" id="for-detail-5"></div>
+  <div class="for-cta-wrap reveal" style="text-align:center;padding:40px 0 8px;">
+    <button class="btn btn-p" onclick="sv('contact')" data-i18n="for-demo-btn">Request Clinical Demo</button>
+  </div>
+</div>
+    </div>
+  </div>
+
+  <!-- 4 · PROOF BAR -->
+  <div class="proof">
+    <div class="prc reveal"><div class="prn" data-i18n="proof-n1">87%</div><div class="prl" data-i18n="proof-l1">Patients access material unreachable via talk therapy alone</div><div class="prc2" data-i18n="proof-c1">Carhart-Harris et al., 2018</div></div>
+    <div class="prc reveal d1"><div class="prn" data-i18n="proof-n2">3.6×</div><div class="prl" data-i18n="proof-l2">Decrease in stress scores over a structured programme</div><div class="prc2" data-i18n="proof-c2">Csikszentmihalyi — ESM</div></div>
+    <div class="prc reveal d2"><div class="prn" data-i18n="proof-n3">40%</div><div class="prl" data-i18n="proof-l3">Reduction in PTSD symptom severity — standalone protocol</div><div class="prc2" data-i18n="proof-c3">Bradt &amp; Dileo, 2010 · Cochrane</div></div>
+    <div class="prc reveal d3"><div class="prn" data-i18n="proof-n4">1/10th</div><div class="prl" data-i18n="proof-l4">The cost of individual psychedelic-assisted therapy</div><div class="prc2" data-i18n="proof-c4">MAPS PAT analysis, 2023</div></div>
+  </div>
+
+  <!-- 5 · CLINICAL INDICATIONS -->
+  <section id="inds">
+    <div class="sec">
+      <p class="sl reveal"><span id="i18n-ind-label">Clinical indications</span></p>
+      <h2 class="sh reveal" data-i18n="ind-title">Where Awe Field<br/><em>fits your practice</em></h2>
+      <div class="cg" id="ind-grid">
+        <div class="card ind-card reveal" onclick="toggleInd(this)">
+          <div class="cn" data-i18n="ind01-cn">Indication 01</div>
+          <h3 class="ct" data-i18n="ind01-ct">Psychedelic-assisted therapy<br/><em>preparation &amp; integration</em></h3>
+          <div class="tags"><span class="tag">Psilocybin</span><span class="tag">Ketamine</span><span class="tag">MDMA-AT</span><span class="tag">Preparation</span><span class="tag">Integration</span></div>
+          <div class="ind-body"><p class="cb" style="padding-top:16px;" data-i18n="ind01-body">Before any pharmacological intervention, Awe Field familiarises patients with non-ordinary states — reducing adverse reactions, ego-dissolution anxiety, and treatment resistance. Patients arrive knowing their inner landscape.<br/><br/>Post-session, the integration protocol significantly extends the window of neuroplasticity following a psychedelic experience.</p></div>
+          <span class="ind-hint">Expand →</span>
+        </div>
+        <div class="card ind-card reveal d1" onclick="toggleInd(this)">
+          <div class="cn" data-i18n="ind02-cn">Indication 02</div>
+          <h3 class="ct" data-i18n="ind02-ct">Standalone intervention<br/><em>PTSD · Anxiety · Depression</em></h3>
+          <div class="tags"><span class="tag">Complex PTSD</span><span class="tag">Treatment-resistant</span><span class="tag">Alexithymia</span><span class="tag">Depression</span><span class="tag">GAD</span></div>
+          <div class="ind-body"><p class="cb" style="padding-top:16px;" data-i18n="ind02-body">For patients for whom psychedelic-assisted therapy is contraindicated, financially inaccessible, or personally undesired, Awe Field provides comparable depth via acoustic induction alone.<br/><br/>Emotional release and grief protocols access stored somatic memory without verbal articulation — particularly effective for complex PTSD and high alexithymia.</p></div>
+          <span class="ind-hint">Expand →</span>
+        </div>
+        <div class="card ind-card reveal d2" onclick="toggleInd(this)">
+          <div class="cn" data-i18n="ind03-cn">Indication 03</div>
+          <h3 class="ct" data-i18n="ind03-ct">Group &amp; community<br/><em>therapeutic settings</em></h3>
+          <div class="tags"><span class="tag">Group therapy</span><span class="tag">Community clinics</span><span class="tag">NHS compatible</span><span class="tag">Retreats</span></div>
+          <div class="ind-body"><p class="cb" style="padding-top:16px;" data-i18n="ind03-body">Individual psychedelic therapy costs £2,000–£10,000 per course. Awe Field offers a clinically credible alternative — synchronised communal sessions for groups of up to ten.<br/><br/>Designed for community clinics, residential treatment, NHS group therapy settings, and retreat environments.</p></div>
+          <span class="ind-hint">Expand →</span>
+        </div>
+        <div class="card ind-card reveal d3" onclick="toggleInd(this)">
+          <div class="cn" data-i18n="ind04-cn">Indication 04</div>
+          <h3 class="ct" data-i18n="ind04-ct">Patients who cannot or will not<br/><em>use psychedelics</em></h3>
+          <div class="tags"><span class="tag">Contraindicated PAT</span><span class="tag">Patient preference</span><span class="tag">Graded exposure</span><span class="tag">Practitioner-led</span></div>
+          <div class="ind-body"><p class="cb" style="padding-top:16px;" data-i18n="ind04-body">Contraindications — including personal history of psychosis, schizophrenia spectrum conditions, or patient preference — exclude a large population from depth-oriented altered-state work.<br/><br/>Awe Field provides a safe, graded, fully practitioner-guided pathway for these populations.</p></div>
+          <span class="ind-hint">Expand →</span>
+        </div>
+      </div>
+      <p class="maxim reveal" data-i18n="ind-maxim">Awe Field does not aim to maximise intensity.<br/>It aims to optimise safety, readiness, and integration.</p>
+    <div style="margin-top:28px;text-align:center;" class="reveal">
+      <button class="btn btn-p" onclick="sv('protocol')" data-i18n="ind-btn">View Protocol →</button>
+    </div>
+    </div>
+  </section>
+
+  <!-- 6 · CLINICAL MEASUREMENTS -->
+  <section class="mso">
+    <canvas id="mcv"></canvas>
+    <div class="msi">
+      <p class="sl reveal" data-i18n="meas-label">Clinical measurement</p>
+      <h2 class="sh reveal" data-i18n="meas-title">Outcomes you can<br/><em>document and defend</em></h2>
+      <div class="mgd">
+        <div class="mcard reveal"><div class="mbadge" data-i18n="mc1-badge">Resilience Scale</div><h3 class="mtitle" data-i18n="mc1-title">Trait change in coping mechanisms</h3><p class="mbody" data-i18n="mc1-body">The resilience scale is administered at intake, mid-programme, and close. Delta scores provide a peer-reviewed outcome metric suitable for clinical records, insurance submissions, and research contribution.</p><p class="mref">Connor &amp; Davidson, 2003 · Validated in 40+ languages</p></div>
+        <div class="mcard reveal d1"><div class="mbadge" data-i18n="mc2-badge">HRV</div><h3 class="mtitle" data-i18n="mc2-title">Heart Rate Variability Monitoring</h3><p class="mbody" data-i18n="mc2-body">Optional integration with consumer wearables (Apple Watch, Garmin, Polar). Reads autonomic state in real time and adapts integration questioning depth — containment or depth, based on patient's live state.</p><p class="mref">Thayer et al., 2012 · Neuroscience &amp; Biobehavioural Reviews</p></div>
+        <div class="mcard reveal d2"><div class="mbadge" data-i18n="mc3-badge">NLP</div><h3 class="mtitle" data-i18n="mc3-title">Language Pattern Analysis</h3><p class="mbody" data-i18n="mc3-body">Every word spoken during integration is analysed for semantic proximity to the stated therapeutic intention. The system tracks linguistic evolution — from avoidance to embodiment, from past to present.</p><p class="mref">Pennebaker et al., LIWC framework · Adapted for therapeutic use</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · WHY AWE FIELD -->
+  <div class="posbg">
+    <div class="posinn">
+      <div>
+        <p class="sl reveal" data-i18n="pos-label">Why Awe Field</p>
+        <h2 class="sh reveal" data-i18n="pos-title">Where Awe Field sits<br/><em>in the clinical landscape</em></h2>
+        <p class="posb reveal" data-i18n="posb">Awe Field is not a replacement for psychedelic-assisted therapy. It is the pathway that makes it safer, more effective, and more accessible — and a standalone intervention for patients who cannot or do not want to go pharmacological.</p>
+      </div>
+      <div class="reveal">
+        <table class="ptbl" id="pos-table">
+          <thead><tr><th>Dimension</th><th>Awe Field</th><th>Standard PAT</th><th>Talk Therapy</th></tr></thead>
+          <tbody>
+            <tr><td>Somatic memory access</td><td class="ck">✓</td><td class="ck">✓</td><td class="cx">Limited</td></tr>
+            <tr><td>Pre-verbal material</td><td class="ck">✓</td><td class="ck">✓</td><td class="cx">—</td></tr>
+            <tr><td>No substance required</td><td class="ck">✓</td><td class="cx">—</td><td class="ck">✓</td></tr>
+            <tr><td>Validated measurement</td><td class="ck">✓</td><td class="cx">Partial</td><td class="ck">✓</td></tr>
+            <tr><td>Group delivery</td><td class="ck">✓</td><td class="cx">Rare</td><td class="ck">✓</td></tr>
+            <tr><td>Cost per patient</td><td class="ck">Low</td><td class="cx">£2–10k</td><td>Medium</td></tr>
+            <tr><td>Depth of altered state</td><td class="ck">High</td><td class="ck">High</td><td class="cx">Low</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 · THE MECHANISM -->
+  <div class="manifesto" style="border-top:1px solid var(--border);padding-top:88px;">
+    <div class="mf-label reveal"><span id="i18n-mf-label">The mechanism</span></div>
+    <h2 class="mf-title reveal" data-i18n="mf-title">Emotional processing, clarity,<br/>and insight happen<br/><em>in the altered state.</em></h2>
+    <div class="mf-divider reveal"></div>
+    <p class="mf-body reveal" data-i18n="mf-body1">Ordinary waking consciousness is not where transformation occurs. <strong>The altered state is.</strong> Every major therapeutic breakthrough — the moment a patient finally accesses grief, integrates trauma, or sees their life with radical clarity — happens when the ordinary filters of the mind have shifted.</p>
+    <p class="mf-body reveal" data-i18n="mf-body2">Psychedelics have made this universally understood. But the substance is not the only path to the state. <strong>Awe Field induces the altered state through sound, structure, and intention</strong> — safely, measurably, and under full practitioner control.</p>
+    <p class="mf-body reveal" data-i18n="mf-body3" style="font-family:'Playfair Display',serif;font-style:italic;font-size:19px;color:var(--text);">Your clients need that state. Awe Field provides it — without the substance.</p>
+  </div>
+
+  <!-- 9 · FOUNDING COHORT CTA -->
+  <section class="ctasec">
+    <div class="ctaw">
+      <div class="ctabl reveal"><span id="i18n-cta-label">Founding Cohort · Limited Places</span></div>
+      <h2 class="ctah reveal"><span id="i18n-cta-title">Are you ready to work<br/><em>at the edge of what's possible?</em></span></h2>
+      <p class="ctap reveal" data-i18n="cta-p">A small number of practitioners are shaping how Awe Field enters clinical practice. Early cohort members receive direct access to the founding team, early pricing, and meaningful influence over the protocol's development.</p>
+      <div class="ctabls reveal">
+        <div class="ctabi" data-i18n="ctabi1">Founding-cohort pricing — significantly reduced launch rate</div>
+        <div class="ctabi" data-i18n="ctabi2">Shape the protocol — your clinical feedback drives development</div>
+        <div class="ctabi" data-i18n="ctabi3">Priority access to every future tool and research output</div>
+        <div class="ctabi" data-i18n="ctabi4">Direct line to the founding team throughout</div>
+      </div>
+      <div class="ctar reveal">
+        <button class="btn btn-p" onclick="sv('contact')" data-i18n="cta-btn1">Request Clinical Demo</button>
+        <button class="btn btn-g" onclick="sv('contact')" data-i18n="cta-btn2">Join Our Early Access Programme</button>
+      </div>
+      <p class="ctan reveal" data-i18n="ctan">GDPR compliant · Wearable integration · Practitioner dashboard · Clinical licensing available</p>
+    </div>
+  </section>
+
+  <!-- 10 · NEWSLETTER -->
+  <div class="nl-sec">
+    <div class="nl-inner">
+      <div class="nl-label reveal"><span id="i18n-nl-label">Stay in the field</span></div>
+      <h2 class="nl-title reveal" data-i18n="nl-title">Research, insights,<br/><em>and early access announcements</em></h2>
+      <p class="nl-sub reveal" data-i18n="nl-sub">Join clinicians, researchers, and facilitators following the frontier of altered states therapy. No noise — only what matters.</p>
+      <form class="nl-form reveal" action="https://formspree.io/anaivivcaro@gmail.com" method="POST" onsubmit="handleNL(event,this)">
+        <input type="hidden" name="_subject" value="Awe Field Newsletter Signup"/>
+        <input type="hidden" name="_replyto" value=""/>
+        <input class="nl-input" type="email" name="email" data-i18n-placeholder="nl-email-ph" placeholder="your@email.com" required/>
+        <button type="submit" class="btn btn-p" style="white-space:nowrap;" data-i18n="nl-btn">Join the list →</button>
+      </form>
+      <p class="nl-note reveal" data-i18n="nl-note">No spam. Unsubscribe anytime. Your data is never shared.</p>
+    </div>
+  </div>
+
+</div><!-- end home view -->
+
+<!-- PROTOCOL -->
+<div class="view" id="view-protocol">
+  <div class="pbg" style="min-height:100vh;padding-top:120px;">
+    <div class="pi">
+
+      <p class="sl" data-i18n="proto-label">The clinical protocol</p>
+      <h2 class="sh" data-i18n="proto-title">End-to-end structured pathway —<br/><em>intake through to programme report</em></h2>
+      <div class="sg" style="margin-top:52px;">
+        <div class="step"><div class="sn" data-i18n="sn1">Step 01</div><h3 class="st" data-i18n="st1"><em>Patient baseline</em> assessment</h3><p class="sb" data-i18n="sb1">Validated intake using a resilience scale, prior altered-state experience scoring across five domains, and trait-level psychological profiling. Generates a clinical readiness score and recommended entry pathway.</p><div class="sd" id="sd1"><div class="detail">Validated resilience scale + ASC scoring</div><div class="detail">Output: readiness tier + recommended protocol path</div></div></div>
+        <div class="step"><div class="sn" data-i18n="sn2">Step 02</div><h3 class="st" data-i18n="st2"><em>Intention setting</em> &amp; plan generation</h3><p class="sb" data-i18n="sb2">The client selects from five clinical intention pathways, or co-creates a specific therapeutic focus with the therapist. The system generates a personalised programme.</p><div class="sd" id="sd2"><div class="detail">Pathways: Deep Rest · Expanded Awareness · Creative Flow · Emotional Processing · Clarity</div></div></div>
+        <div class="step"><div class="sn" data-i18n="sn3">Step 03</div><h3 class="st" data-i18n="st3"><em>Session</em> — induction to close</h3><p class="sb" data-i18n="sb3">Mood assessment, somatic activation, a personalised music journey with optional voice recording, and reflective prompts. HRV monitoring via wearable if enabled.</p><div class="sd" id="sd3"><div class="detail">Pre-session mood + personalised journey + HRV data</div></div></div>
+        <div class="step"><div class="sn" data-i18n="sn4">Step 04</div><h3 class="st" data-i18n="st4"><em>AI-guided integration</em> — 5 dimensions</h3><p class="sb" data-i18n="sb4">Post-session integration across somatic, visual, auditory, relational, and memory dimensions — cross-referencing in-session voice recordings.</p><div class="sd" id="sd4"><div class="detail">Session fully recorded — accessible to patient and clinician</div></div></div>
+        <div class="step full"><div class="sn" data-i18n="sn5">Step 05 · Programme Close</div><h3 class="st" data-i18n="st5"><em>Clinical report</em> — outcomes &amp; recommendations</h3><p class="sb" data-i18n="sb5">At programme close, Awe Field produces a comprehensive clinical report: HRV trajectory, peak moment mapping, language pattern analysis, resilience scale delta, and continuation pathway.</p><div class="sd" id="sd5" style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px 24px;"><div class="detail">HRV trajectory per session</div><div class="detail">Language pattern &amp; intention alignment</div><div class="detail">Resilience score delta</div><div class="detail">Peak moment biometric mapping</div><div class="detail">Continuation pathway recommendation</div><div class="detail">GDPR-compliant · Exportable PDF</div></div></div>
+      
+    <div style="margin-top:48px;text-align:center;grid-column:1/-1;">
+      <button class="btn btn-p" onclick="sv('contact')" data-i18n="req-demo-btn">Request Clinical Demo</button>
+    </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="view" id="view-about">
+  <div class="tp">
+
+    <div class="tph"><p class="sl" data-i18n="about-label">About &amp; Advisory</p><h2 class="sh" data-i18n="about-title">The people and ideas<br/><em>behind Awe Field</em></h2></div>
+    <p class="sl" data-i18n="about-dev-label">Developed by</p>
+    <div class="fwrap">
+      <div class="fid"><div class="fn">Viviana Caro</div><div class="fr" data-i18n="founder-role">Product Designer &amp; Founder</div><a href="https://www.linkedin.com/in/vivianacaros/" target="_blank">↗ LinkedIn</a></div>
+      <div><p class="fbio" data-i18n="founder-bio">Awe Field was born through Viviana Caro's PhD research on the neuroaesthetics of immersive sound — an inquiry into how structured acoustic environments can alter the way we perceive ourselves, access memory, and navigate altered states of consciousness.<br/><br/>Her work integrates principles from neuroaesthetics, consciousness studies, and immersive experience design to create measurable, non-pharmacological pathways with an emphasis on safety, personalisation, and clinical applicability.</p></div>
+    </div>
+    <hr class="adivider"/>
+    <p class="sl" data-i18n="adv-label">Advisory network</p>
+    <div class="afg">
+      <div class="afc"><div class="an">Dr. David Luke</div><div class="ar">University of Greenwich · Psychology &amp; Consciousness Studies</div><p class="ab" data-i18n="adv1-bio">Researcher in psychology and consciousness studies with a particular focus on altered states, psychedelics, and anomalous experiences. His work explores the phenomenology and therapeutic potential of non-ordinary states.</p></div>
+      <div class="afc"><div class="an">Valentin Randon</div><div class="ar">Head of Product · Muse &amp; Monroe Institute</div><p class="ab" data-i18n="adv2-bio">Consciousness innovator and product leader specialising in neurophysiological sensing, adaptive feedback systems, and experience design. Speaker on neurotechnology ethics and human potential.</p></div>
+      <div class="afc"><div class="an">Dr. Emma Margetson</div><div class="ar">University of Greenwich · Senior Lecturer in Music &amp; Sound Design</div><p class="ab" data-i18n="adv3-bio">Acousmatic composer and academic specialising in immersive and spatial sound. Programme Leader for the MA Music &amp; Sound Design at the University of Greenwich.</p></div>
+    </div>
+    <hr class="adivider"/>
+    <div class="a2c">
+      <div class="acl"><h3 data-i18n="research-title">The research<br/><em>foundations</em></h3><div class="alist" id="research-list"><div class="ali">Self-transcendent experiences</div><div class="ali">Music-induced altered states</div><div class="ali">Spatial and immersive sound</div><div class="ali">Clinical integration practices</div><div class="ali">Ritual theory &amp; neuroaesthetics</div><div class="ali">Quantum mechanics</div></div></div>
+      <div class="acl" id="framework-col"><h3 data-i18n="framework-title">A framework for<br/><em>navigating altered states.</em></h3><p>Awe Field is a regulated interface into altered states. A training ground for consciousness navigation. A clinical modulation system — not merely an experience.</p><p>Our mission: expand access to depth-oriented therapeutic work and create pathways for insight and transformation that are genuinely affordable.</p></div>
+    
+    <div style="margin-top:48px;text-align:center;border-top:1px solid var(--border);padding-top:44px;">
+      <h3 style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(22px,2.8vw,38px);color:var(--text);margin-bottom:12px;"><span data-i18n="about-cta-h">Ready to explore<br/><em style="color:var(--gold2);">what Awe Field can offer?</em></span></h3>
+      <button class="btn btn-p" onclick="sv('contact')" style="margin-top:16px;" data-i18n="about-cta-btn">Get in Touch</button>
+    </div>
+</div>
+  </div>
+</div>
+
+<!-- SCIENCE -->
+<div class="view" id="view-science">
+  <div class="tp">
+
+    <div class="tph">
+      <p class="sl" data-i18n="sci-label">Evidence base</p>
+      <h2 class="sh" data-i18n="sci-title">The science behind<br/><em>Awe Field</em></h2>
+      <p class="ss" data-i18n="sci-sub">Awe Field is grounded in peer-reviewed research across music therapy, altered states neuroscience, HRV biofeedback, and consciousness studies.</p>
+    </div>
+    <p class="sl" style="margin-top:0;" data-i18n="sci-areas">Key research areas</p>
+    <div class="cg" style="margin-top:28px;">
+      <div class="card">
+        <div class="cn" data-i18n="sci1-cn">Music &amp; Altered States</div>
+        <h3 class="ct" data-i18n="sci1-ct">How music induces<br/><em>non-ordinary states</em></h3>
+        <p class="cb" data-i18n="sci1-body">Research by Kaelen et al. (2015, 2018) demonstrates that music is a primary driver of the subjective experience in psychedelic therapy — including emotional breakthrough, imagery, and oceanic boundlessness. Music-evoked altered states share neural signatures with pharmacologically induced ones.</p>
+        <div class="tags"><span class="tag">Kaelen 2015</span><span class="tag">Kaelen 2018</span><span class="tag">Default Mode Network</span></div>
+      </div>
+      <div class="card">
+        <div class="cn" data-i18n="sci2-cn">HRV &amp; Autonomic State</div>
+        <h3 class="ct" data-i18n="sci2-ct">Heart Rate Variability<br/><em>as a clinical window</em></h3>
+        <p class="cb" data-i18n="sci2-body">Thayer et al. (2012) established HRV as a validated proxy for autonomic nervous system flexibility — directly linked to emotional regulation, cognitive flexibility, and therapeutic readiness. Real-time HRV enables adaptive modulation of session depth and integration pacing.</p>
+        <div class="tags"><span class="tag">Thayer 2012</span><span class="tag">Autonomic NS</span><span class="tag">Neurovisceral integration</span></div>
+      </div>
+      <div class="card">
+        <div class="cn" data-i18n="sci3-cn">PTSD &amp; Sound Therapy</div>
+        <h3 class="ct" data-i18n="sci3-ct">Acoustic intervention<br/><em>for trauma processing</em></h3>
+        <p class="cb" data-i18n="sci3-body">A Cochrane Review (Bradt &amp; Dileo, 2010) across 26 studies found music therapy produced significant reductions in PTSD symptom severity, anxiety, and depression. Sound-based interventions access somatic memory via pre-verbal pathways bypassed by standard cognitive approaches.</p>
+        <div class="tags"><span class="tag">Bradt &amp; Dileo 2010</span><span class="tag">Cochrane Review</span><span class="tag">PTSD</span></div>
+      </div>
+      <div class="card">
+        <div class="cn" data-i18n="sci4-cn">Language &amp; Integration</div>
+        <h3 class="ct" data-i18n="sci4-ct">Semantic change as<br/><em>outcome measure</em></h3>
+        <p class="cb" data-i18n="sci4-body">Pennebaker's LIWC framework (decades of research) shows that linguistic shifts — from past to present tense, from avoidance to embodiment — are reliable predictors of therapeutic integration. Awe Field's NLP layer tracks this evolution across the programme.</p>
+        <div class="tags"><span class="tag">Pennebaker LIWC</span><span class="tag">Linguistic analysis</span><span class="tag">Integration tracking</span></div>
+      </div>
+    </div>
+    <div class="maxim" style="margin-top:40px;" data-i18n="sci-maxim">Awe Field is a synthesis of established clinical science — not a new-age experiment, but a structured application of peer-reviewed mechanisms.</div>
+    <div style="margin-top:48px;text-align:center;grid-column:1/-1;">
+      <button class="btn btn-p" onclick="sv('contact')" data-i18n="req-demo-btn">Request Clinical Demo</button>
+    </div>
+  </div>
+</div>
+
+<!-- MUSIC -->
+<div class="view" id="view-music">
+  <div class="tp">
+
+    <div class="tph"><p class="sl" data-i18n="mus-label">Music &amp; Sound Design</p><h2 class="sh" data-i18n="mus-title">A curated and adaptive<br/><em>sonic architecture</em></h2><p class="ss" data-i18n="mus-sub">The Awe Field protocol draws from multiple musical and acoustic approaches — each selected based on its capacity to guide shifts in perception, emotion, and physiological state.</p></div>
+    <p class="sl" data-i18n="mus-approaches">The sonic approaches</p>
+    <div class="mugrid" id="mus-grid"><div class="mugc"><h3>Ambient &amp; Minimal Compositions</h3><p>For nervous system regulation and grounding — a stable acoustic container from which deeper states become accessible.</p></div><div class="mugc"><h3>Psychoacoustic Textures</h3><p>To influence spatial perception and internal focus. Sound that operates below the level of conscious attention.</p></div><div class="mugc"><h3>Rhythmic Entrainment</h3><p>To support state transitions and emotional processing. Tempo and rhythm as physiological tools calibrated to the specific phase of the journey.</p></div><div class="mugc"><h3>Harmonic &amp; Tonal Structures</h3><p>Designed to evoke tension, release, and resolution — moving emotional material without requiring narrative.</p></div><div class="mugc"><h3>Dynamic Soundscapes</h3><p>That evolve in response to the listener's physiological state. Sound as the primary guide through different depths of experience.</p></div><div class="mugc"><h3>Spatial &amp; Immersive Sound</h3><p>Drawing on electroacoustic composition and diffusion. The spatial dimension of sound as a therapeutic tool.</p></div></div>
+    <div class="artbox"><div><h3>For Musicians<br/>&amp; <em>Sound Artists</em></h3><p class="tgl" data-i18n="mus-tgl">"We are not looking for tracks.<br/>We are looking for states,<br/>translated into sound."</p></div><div><p data-i18n="mus-artists">If you are a musician, composer, or sound artist working with music that has the potential to evoke altered states, we would love to hear from you.<br/><br/>We are building a curated library prioritising depth over stimulation, intention over genre, and emotional impact over form.</p><button class="btn btn-g btn-sm" onclick="sv('contact')" style="margin-top:14px;" data-i18n="mus-submit">Submit Your Work</button></div>
+    <div style="margin-top:44px;text-align:center;border-top:1px solid var(--border);padding-top:40px;">
+      <p style="font-size:16px;color:var(--dim);margin-bottom:20px;max-width:480px;margin-left:auto;margin-right:auto;" data-i18n="mus-demo-p">Experience how Awe Field's curated sonic architecture works in a live clinical context.</p>
+      <button class="btn btn-p" onclick="sv('contact')" data-i18n="req-demo-btn">Request a Clinical Demo</button>
+    </div>
+</div>
+  </div>
+</div>
+
+<!-- LICENSING -->
+<div class="view" id="view-licensing">
+  <div class="tp">
+
+    <div class="tph"><p class="sl" data-i18n="lic-label">Licensing</p><h2 class="sh" data-i18n="lic-title">Awe Field as a clinical tool<br/><em>for your practice</em></h2><p class="ss" data-i18n="lic-sub">Offered as a clinical tool for licensed practitioners and organisations. All licensing includes structured onboarding to ensure safe and effective use of the protocol.</p></div>
+    <div class="lgrid" id="lic-grid"><div class="licc"><h3><em>Practitioner</em> Licensing</h3><p>Full platform access — patient management, session delivery, and integration tools.</p><div class="licl"><div class="licli">Full platform access</div><div class="licli">Patient management dashboard</div><div class="licli">Session delivery tools</div><div class="licli">AI integration guide</div><div class="licli">HRV wearable integration</div><div class="licli">Clinical reporting</div></div></div><div class="licc"><h3>Clinic &amp; <em>Institutional</em> Licensing</h3><p>Multi-user environments for clinics, retreats, and healthcare providers.</p><div class="licl"><div class="licli">Multi-practitioner accounts</div><div class="licli">Group session delivery</div><div class="licli">Communal integration circles</div><div class="licli">Institutional reporting</div><div class="licli">NHS and clinic compatible</div><div class="licli">Bespoke onboarding</div></div></div><div class="licc"><h3>Training &amp; <em>Onboarding</em></h3><p>Structured onboarding at every level of the organisation.</p><div class="licl"><div class="licli">Clinical framework training</div><div class="licli">Safety and contraindication screening</div><div class="licli">Integration facilitation training</div><div class="licli">Ongoing practitioner support</div></div></div></div>
+    <div class="eab"><div class="eah" data-i18n="eab-title">Early Access <em>Programme</em></div><p class="eap" data-i18n="eab-body">Awe Field is currently in development. We are onboarding a limited number of clinicians for pilot testing at a reduced launch rate.</p><div class="eal" id="eab-list"><div class="eali">Direct support from the founding team</div><div class="eali">Direct influence over product development</div><div class="eali">Early access pricing</div><div class="eali">Priority access to future clinical tools</div></div><button class="btn btn-p" onclick="sv('contact')" data-i18n="eab-btn">Join Our Early Access Programme</button></div>
+    <div class="pdfb"><h3 data-i18n="pdf-title">Protocol PDF</h3><p style="font-size:15px;color:var(--dim);margin-bottom:18px;line-height:1.82;" data-i18n="pdf-desc">A complete document outlining the end-to-end framework for clinicians wanting to understand how Awe Field integrates into their existing practice.</p><div class="pdfl" id="pdf-list"><div class="pdfli">Patient intake and readiness assessment</div><div class="pdfli">Personalisation logic and pathway selection</div><div class="pdfli">Session architecture — induction, peak, integration</div><div class="pdfli">HRV integration and adaptive sonic modulation</div><div class="pdfli">AI-guided integration model across 5 dimensions</div><div class="pdfli">Clinical measurement and reporting structure</div><div class="pdfli">Safety considerations and practitioner guidelines</div></div><div class="pdflk" data-i18n="pdflk">⬤ &nbsp; Available to licensed practitioners on subscription</div><button class="btn btn-p btn-sm" onclick="sv('contact')" data-i18n="pdf-btn">Request Access</button></div>
+  </div>
+</div>
+
+<!-- EVENTS -->
+<div class="view" id="view-events">
+  <div class="tp">
+
+    <div class="tph"><p class="sl" data-i18n="ev-label">Events</p><h2 class="sh" data-i18n="ev-title">Where you can<br/><em>experience Awe Field</em></h2><p class="ss" data-i18n="ev-sub">Live demonstrations, clinical workshops, and immersive sessions for practitioners. Experience the protocol firsthand and speak directly with the founding team.</p></div>
+    <div class="events-grid" id="events-grid">
+      <div class="event-card"><div class="event-date">Coming soon · London</div><div class="event-title">Clinical Demonstration — Founding Cohort</div><div class="event-loc">Location TBC · London</div><div class="event-body">An intimate demonstration of the full Awe Field protocol for a select group of clinicians. Includes live HRV monitoring, guided session, and integration circle. Followed by Q&amp;A with the founding team.</div></div>
+      <div class="event-card"><div class="event-date">Coming soon · International</div><div class="event-title">Practitioner Workshop Series</div><div class="event-loc">Online &amp; In-person</div><div class="event-body">Structured training covering contraindication screening, session delivery, integration facilitation, and clinical reporting.</div></div>
+      <div class="event-card"><div class="event-date">Ongoing · Online</div><div class="event-title">Research Collaboration Calls</div><div class="event-loc">Video call</div><div class="event-body">Monthly calls for researchers and clinicians interested in contributing to Awe Field's ongoing evidence base.</div></div>
+      <div class="event-card"><div class="event-date">Stay informed</div><div class="event-title">Join the Mailing List</div><div class="event-loc">Awe Field · Clinical Division</div><div class="event-body">Be the first to hear about upcoming events, pilot programme openings, and new protocol developments.</div></div>
+    </div>
+    <div style="margin-top:36px;text-align:center;"><button class="btn btn-p" onclick="sv('contact')" data-i18n="ev-reg-btn">Register Interest in Events</button></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="view" id="view-contact">
+  <div class="tp">
+
+    <div class="tph"><p class="sl" data-i18n="con-label">Contact</p><h2 class="sh"><span id="i18n-contact-title">Let's talk about<br/><em>what's possible</em></span></h2></div>
+    <div class="cgrid">
+      <div class="cinf">
+        <p data-i18n="con-intro">We would love to hear from you — whether you are a clinician, retreat facilitator, researcher, or musician interested in the frontier of altered states therapy.</p>
+        <div class="cwho" id="con-who">
+          <div class="cwhi">A clinician, psychiatrist, or psychedelic medicine provider</div>
+          <div class="cwhi">A retreat or ceremony facilitator exploring substance-free depth work</div>
+          <div class="cwhi">A wellness or integrative practitioner</div>
+          <div class="cwhi">A consciousness researcher or academic</div>
+          <div class="cwhi">A musician or sound artist interested in collaborating</div>
+        </div>
+        <div class="cdet">
+          <div class="cdrow"><div class="cdl" data-i18n="cdl-email">Email</div><div class="cdv">anaivivcaro@gmail.com</div></div>
+          <div class="cdrow"><div class="cdl" data-i18n="cdl-location">Location</div><div class="cdv" data-i18n="cdv-location">London · Available internationally</div></div>
+          <div class="cdrow"><div class="cdl" data-i18n="cdl-programmes">Programmes</div><div class="cdv" data-i18n="cdv-programmes">Clinical partnerships · Pilot programmes · Early access cohort</div></div>
+        </div>
+      </div>
+      <form class="cform" id="contact-form" action="https://formspree.io/anaivivcaro@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Awe Field Enquiry"/>
+        <input type="hidden" name="_replyto" value=""/>
+        <div class="frow">
+          <div class="ff"><label for="nm" data-i18n="con-lbl-name">Full name</label><input type="text" id="nm" name="name" data-i18n-placeholder="con-ph-name" placeholder="Dr. Jane Smith" required/></div>
+          <div class="ff"><label for="em" data-i18n="con-lbl-email">Email address</label><input type="email" id="em" name="email" data-i18n-placeholder="con-ph-email" placeholder="jane@clinic.com" required/></div>
+        </div>
+        <div class="ff"><label for="rl" data-i18n="con-lbl-role">Your role</label><select id="rl" data-i18n-select="role-select" name="role"><option value="">Select your role</option><option>Psychotherapist</option><option>Psychiatrist</option><option>Psychedelic-assisted therapy provider</option><option>Retreat / ceremony facilitator</option><option>Clinical researcher</option><option>Wellbeing practitioner</option><option>NHS / community mental health</option><option>Musician / sound artist</option><option>Other</option></select></div>
+        <div class="ff"><label for="int" data-i18n="con-lbl-int">What brings you to Awe Field?</label><select id="int" data-i18n-select="int-select" name="interest"><option value="">Select your interest</option><option>Clinical demo request</option><option>Early access / founding cohort</option><option>Retreat or ceremony integration</option><option>Research collaboration</option><option>Music / sound design collaboration</option><option>Institutional / clinic licensing</option><option>Events</option><option>General enquiry</option></select></div>
+        <div class="ff"><label for="msg" data-i18n="con-lbl-msg">Tell us more</label><textarea id="msg" name="message" data-i18n-placeholder="con-ph-msg" placeholder="Tell us about your practice and what you hope to explore with Awe Field..."></textarea></div>
+        <div class="ff" style="flex-direction:row;align-items:center;gap:10px;margin-top:4px;">
+          <input type="checkbox" id="nl-check" name="newsletter" value="yes" style="width:16px;height:16px;accent-color:var(--gold);flex-shrink:0;cursor:pointer;"/>
+          <label for="nl-check" data-i18n="con-nl-check" style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);cursor:pointer;">Add me to the Awe Field newsletter</label>
+        </div>
+        <button type="submit" class="btn btn-p" data-i18n="contact-btn">Send Message →</button>
+        <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-top:8px;" data-i18n="con-note">We aim to respond within 48 hours. All enquiries are treated with complete confidentiality.</p>
+      </form>
+    </div>
+  </div>
+  <div style="max-width:560px;margin:56px auto 0;padding:40px;border:1px solid var(--border);border-radius:var(--rc);background:var(--gold-pale);backdrop-filter:blur(14px);text-align:center;">
+    <div class="nl-label" style="justify-content:center;" data-i18n="nl-label">Stay in the field</div>
+    <h3 style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(20px,2.4vw,30px);color:var(--text);margin:10px 0 8px;" data-i18n="con-nl-h3">Research, insights &amp;<br/><em style="color:var(--gold2);font-style:italic;">early access announcements</em></h3>
+    <p style="font-size:14px;color:var(--dim);margin-bottom:22px;line-height:1.75;" data-i18n="con-nl-p">Join practitioners following the frontier of altered states therapy.<br/>No noise — only what matters.</p>
+    <form class="nl-form" id="nl-contact-form" action="https://formspree.io/anaivivcaro@gmail.com" method="POST" onsubmit="handleNLc(event,this)">
+      <input type="hidden" name="_subject" value="Awe Field Newsletter — Contact Page"/>
+      <input class="nl-input" type="email" name="email" placeholder="your@email.com" data-i18n-placeholder="nl-email-ph" required/>
+      <button type="submit" class="btn btn-p" style="white-space:nowrap;" data-i18n="nl-btn">Join the list →</button>
+    </form>
+    <p class="nl-note" style="margin-top:12px;" data-i18n="con-nl-note">No spam · Unsubscribe anytime</p>
+  </div>
+  </div>
+</div>
+</main>
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+
+<footer>
+  <div class="ftl">
+    <div class="awe-wrap">
+      <canvas id="footer-awe-cv" width="96" height="50"></canvas>
+      <span class="awe-text" style="font-size:16px;">Awe</span>
+    </div>
+    <span class="logo-field" style="font-size:16px;">Field</span>
+    <span class="ftt" style="margin-left:6px;">Clinical Protocol</span>
+  </div>
+  <div class="ftlinks">
+    <button onclick="sv('protocol')" data-i18n="footer-protocol">Protocol</button>
+    <button onclick="sv('about')" data-i18n="footer-about">About</button>
+    <button onclick="sv('music')" data-i18n="footer-music">Music</button>
+    <button onclick="sv('licensing')" data-i18n="footer-licensing">Licensing</button>
+    <button onclick="sv('events')" data-i18n="footer-events">Events</button>
+    <button onclick="sv('contact')" data-i18n="footer-contact">Contact</button>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;">
+    <p class="ftc" data-i18n="footer-copy">© 2026 Awe Field · Clinical Division · All rights reserved</p>
+    <p style="font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.18em;color:var(--muted);opacity:.5;"><span data-i18n="footer-love">Created with love</span></p>
+  </div>
+</footer>
+
+<script>
+/* ── PERLIN NOISE ── */
+const _p=(()=>{
+  const p=new Uint8Array(256);for(let i=0;i<256;i++)p[i]=i;
+  for(let i=255;i>0;i--){const j=0|Math.random()*(i+1);const t=p[i];p[i]=p[j];p[j]=t;}
+  const pp=new Uint8Array(512);for(let i=0;i<512;i++)pp[i]=p[i&255];
+  const f=t=>t*t*t*(t*(t*6-15)+10);const l=(a,b,t)=>a+(b-a)*t;const g=(h,x,y)=>{const v=h&1?x:y;return h&2?-v:v;};
+  return(x,y,z=0)=>{const X=Math.floor(x)&255,Y=Math.floor(y)&255,Z=Math.floor(z)&255;x-=Math.floor(x);y-=Math.floor(y);z-=Math.floor(z);const u=f(x),v=f(y),w=f(z);const A=pp[X]+Y,B=pp[X+1]+Y,A1=pp[A+Z],B1=pp[B+Z],A2=pp[A+1+Z],B2=pp[B+1+Z];return l(l(l(g(A1,x,y),g(B1,x-1,y),u),l(g(A2,x,y-1),g(B2,x-1,y-1),u),v),l(l(g(pp[A+Z+1],x,y),g(pp[B+Z+1],x-1,y),u),l(g(pp[A2+1],x,y-1),g(pp[B2+1],x-1,y-1),u),v),w);};
+})();
+function pn(x,y,z,o=3){let v=0,a=1,f=1,m=0;for(let i=0;i<o;i++){v+=_p(x*f,y*f,z*f)*a;m+=a;a*=.5;f*=2;}return v/m;}
+
+/* ── NAV + TABS ── */
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('s',scrollY>40);
+  const st=document.getElementById('scroll-top');
+  if(st)st.classList.toggle('vis',scrollY>320);
+});
+function toggleMob(){const m=document.getElementById('mm');m.style.display=m.style.display==='flex'?'none':'flex';}
+function sv(id,btn){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.getElementById('view-'+id).classList.add('active');
+  document.querySelectorAll('.nl').forEach(n=>n.classList.remove('at'));
+  if(btn)btn.classList.add('at');
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(()=>document.querySelectorAll('#view-'+id+' .reveal').forEach(el=>{el.classList.remove('vis');ro.observe(el);}),80);
+}
+const ro=new IntersectionObserver(es=>es.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('vis'),i*50);}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+/* ── AWE LOGO — fixed spiral, glowing bead travels along path ── */
+(function(){
+  const c=document.getElementById('awe-cv');if(!c)return;
+  const ctx=c.getContext('2d');
+  const CW=96,CH=50,cx=CW/2,cy=CH/2;
+  let t=0,hov=false,hStr=0;
+  const wrap=c.parentElement;
+  if(wrap){wrap.addEventListener('mouseenter',()=>hov=true);wrap.addEventListener('mouseleave',()=>hov=false);}
+
+  function spiralPt(fr,rxMax,ryMax,tOff){
+    const ang=fr*3.2*Math.PI*2;
+    const org=0.018*Math.sin(ang*2.5+tOff*0.25)+0.010*Math.cos(ang*4-tOff*0.18);
+    return{
+      x:cx+Math.cos(ang)*rxMax*fr*(1+org),
+      y:cy+Math.sin(ang)*ryMax*fr*(1+org*0.7)
+    };
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,CW,CH);
+    hStr+=(hov?1:-1)*0.055;hStr=Math.max(0,Math.min(1,hStr));
+
+    // Gentle breathing pulse — slow sinusoidal scale variation
+    const pulse=0.5+0.5*Math.sin(t*0.72);
+    const pulseS=1.0+pulse*0.055;
+    const rx=(CW/2+1.5+hStr*0.8)*pulseS;
+    const ry=(CH/2+1.5+hStr*0.6)*pulseS;
+    const steps=320;
+    // Pulse-modulated opacity for the spiral path
+    const spiralAlpha=0.72+pulse*0.28;
+
+    // Base spiral — fixed, no rotation, gently pulsing
+    ctx.beginPath();
+    for(let i=0;i<=steps;i++){
+      const fr=i/steps;
+      const pt=spiralPt(fr,rx,ry,t);
+      i===0?ctx.moveTo(pt.x,pt.y):ctx.lineTo(pt.x,pt.y);
+    }
+    const grad=ctx.createLinearGradient(cx-rx,cy,cx+rx,cy);
+    grad.addColorStop(0,`rgba(200,135,100,0.0)`);
+    grad.addColorStop(0.3,`rgba(200,135,100,${0.12*spiralAlpha})`);
+    grad.addColorStop(0.65,`rgba(217,154,126,${0.38*spiralAlpha})`);
+    grad.addColorStop(0.88,`rgba(184,159,224,${0.26*spiralAlpha})`);
+    grad.addColorStop(1,`rgba(200,135,100,0.0)`);
+    ctx.strokeStyle=grad;
+    ctx.lineWidth=(hov?1.15:0.85)*(0.88+pulse*0.18);
+    ctx.lineCap='round';
+    ctx.stroke();
+
+    // Glowing bead traveling along the fixed spiral path
+    const beadFr=((t*0.028)%1.0);
+    const beadPt=spiralPt(beadFr,rx,ry,t);
+    // Bead size pulses with the spiral
+    const beadR=6+hStr*2.5+pulse*1.2;
+
+    // Trail — segments leading up to bead
+    const TRAIL=0.055,TRAIL_STEPS=22;
+    ctx.beginPath();
+    for(let j=0;j<=TRAIL_STEPS;j++){
+      const jfr=Math.max(0.001,beadFr-TRAIL+(j/TRAIL_STEPS)*TRAIL);
+      const jpt=spiralPt(jfr,rx,ry,t);
+      j===0?ctx.moveTo(jpt.x,jpt.y):ctx.lineTo(jpt.x,jpt.y);
+    }
+    const trailGrd=ctx.createLinearGradient(
+      spiralPt(Math.max(0.001,beadFr-TRAIL),rx,ry,t).x,
+      spiralPt(Math.max(0.001,beadFr-TRAIL),rx,ry,t).y,
+      beadPt.x,beadPt.y
+    );
+    trailGrd.addColorStop(0,'rgba(200,135,100,0)');
+    trailGrd.addColorStop(1,`rgba(220,155,110,${0.68+hStr*0.18+pulse*0.14})`);
+    ctx.strokeStyle=trailGrd;
+    ctx.lineWidth=1.3+hStr*0.3+pulse*0.2;
+    ctx.stroke();
+
+    // Bead outer glow — pulses in brightness
+    const bGrd=ctx.createRadialGradient(beadPt.x,beadPt.y,0,beadPt.x,beadPt.y,beadR);
+    bGrd.addColorStop(0,`rgba(255,210,170,${0.88+hStr*0.08+pulse*0.12})`);
+    bGrd.addColorStop(0.45,`rgba(200,135,100,${0.48+hStr*0.15+pulse*0.12})`);
+    bGrd.addColorStop(1,'rgba(200,135,100,0)');
+    ctx.fillStyle=bGrd;
+    ctx.beginPath();ctx.arc(beadPt.x,beadPt.y,beadR,0,Math.PI*2);ctx.fill();
+
+    // Bead core
+    ctx.fillStyle=`rgba(255,230,195,0.98)`;
+    ctx.beginPath();ctx.arc(beadPt.x,beadPt.y,1.6+pulse*0.3,0,Math.PI*2);ctx.fill();
+
+    // Hover outer ring
+    if(hStr>0.08){
+      ctx.beginPath();ctx.ellipse(cx,cy,rx*0.94,ry*0.94,0,0,Math.PI*2);
+      ctx.strokeStyle=`rgba(200,135,100,${0.06*hStr})`;ctx.lineWidth=7;ctx.stroke();
+    }
+
+    t+=0.016;
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── WHO IS THIS FOR — interactive expand ── */
+const FOR_DATA=[
+  {
+    icon:'⚕',
+    title:'Psychotherapists &amp; Psychiatrists',
+    body:'Integrate non-ordinary states into individual and group practice. Awe Field provides a structured, evidence-based framework for introducing altered states into depth-oriented psychotherapy — with validated outcome measures, clinical reporting, and full practitioner control at every step. The protocol adapts to your existing modality — psychodynamic, somatic, or integrative — without replacing your framework.',
+    tags:['Depth therapy','Group practice','PTSD','Trauma','Clinical outcomes'],
+    callout:'"Awe Field allows you to work at depths previously only accessible through pharmacological intervention — safely, measurably, and within your existing clinical framework."'
+  },
+  {
+    icon:'◈',
+    title:'Psychedelic Medicine Providers',
+    body:'Use Awe Field as a clinically rigorous preparation and integration protocol around ketamine, psilocybin, or MDMA-AT sessions. Familiarise patients with non-ordinary states before pharmacological intervention, reducing adverse reactions and ego-dissolution anxiety. Post-session, the integration protocol extends the neuroplasticity window — deepening and anchoring therapeutic gains.',
+    tags:['Psilocybin','Ketamine','MDMA-AT','Preparation','Integration'],
+    callout:'"Patients who arrive knowing their inner landscape experience significantly fewer adverse reactions and deeper therapeutic gains from their psychedelic-assisted session."'
+  },
+  {
+    icon:'◯',
+    title:'Retreat &amp; Ceremony Facilitators',
+    body:'Offer participants a safe, substance-free journey to altered states within your retreat format. Awe Field provides clinical structure, measurability, and practitioner grounding to immersive group experiences — allowing you to offer depth-oriented work with full safety protocols, HRV monitoring, and documented outcomes. Bring the depth of ceremonial work into a fully auditable, clinically grounded format.',
+    tags:['Group sessions','Retreat formats','Substance-free','Ceremony','Integration'],
+    callout:'"Bring the depth of ceremonial work into a fully measurable, clinically grounded format — without substances, without contraindications, without regulatory risk."'
+  },
+  {
+    icon:'◇',
+    title:'Wellness &amp; Integrative Practitioners',
+    body:'Bring depth-oriented altered state work into somatic therapy, breathwork, coaching, and holistic practice — without pharmacological intervention or contraindication risk. Awe Field is designed to extend the depth of any existing wellness practice into the non-ordinary, with structured safety and measurable outcomes that allow you to demonstrate clinical credibility to clients and institutions.',
+    tags:['Somatic therapy','Breathwork','Coaching','Holistic','Integrative'],
+    callout:'"The altered state is not only for clinical psychiatry. Any practitioner working with the mind-body connection can now work at this depth — safely and measurably."'
+  },
+  {
+    icon:'⊕',
+    title:'NHS &amp; Community Mental Health',
+    body:'A scalable, group-deliverable protocol compatible with existing NHS clinical structures and documentation requirements. Designed for treatment-resistant patients where conventional approaches have reached their limit — offering depth-oriented access at a fraction of the cost of individual psychedelic-assisted therapy. Fully GDPR-compliant with exportable clinical reports.',
+    tags:['NHS compatible','Group delivery','Treatment-resistant','PTSD','Cost-effective'],
+    callout:'"At 1/10th the cost of individual PAT, Awe Field makes depth-oriented altered state work accessible to community mental health settings and treatment-resistant populations who cannot afford anything else."'
+  },
+  {
+    icon:'∿',
+    title:'Consciousness Researchers',
+    body:'Awe Field provides a controlled, documented, and reproducible method for inducing altered states — with HRV biometrics, language analysis, and standardised outcome measures built in. Designed for researchers who need a safe, substance-free altered state induction protocol with full data capture, ethics-compatible documentation, and participant safety at every phase.',
+    tags:['Research','HRV','Language analysis','Reproducible','Ethics-approved'],
+    callout:'"A substance-free altered state induction protocol with built-in biometrics and language analysis — designed for ethical, reproducible, auditable consciousness research."'
+  }
+];
+let activeFor=-1;
+
+function renderForPanel(idx){
+  const d=(currentLang==='es'?FOR_DATA_ES:FOR_DATA)[idx];
+  const btnProto=currentLang==='es'?'Ver Protocolo':'View Protocol';
+  const btnDemo=currentLang==='es'?'Solicitar Demo Clínica':'Request Clinical Demo';
+  const btnClose=currentLang==='es'?'↑ Cerrar':'↑ Close';
+  const div=document.createElement('div');
+  div.className='fp-inner';
+  div.innerHTML=`
+    <div>
+      <div class="fp-icon">${d.icon}</div>
+      <h3 class="fp-title">${d.title}</h3>
+      <p class="fp-body">${d.body}</p>
+      <div class="fp-actions">
+        <button class="btn btn-p btn-sm" onclick="sv('protocol')">${btnProto}</button>
+        <button class="btn btn-g btn-sm" onclick="sv('contact')">${btnDemo}</button>
+      </div>
+      <button class="fp-close" onclick="closeFor()">${btnClose}</button>
+    </div>
+    <div>
+      <div class="fp-callout">${d.callout}</div>
+      <div class="tags" style="margin-top:18px;">${d.tags.map(t=>'<span class="tag">'+t+'</span>').join('')}</div>
+    </div>
+  `;
+  return div;
+}
+
+function showFor(idx){
+  const wasOpen=activeFor===idx;
+  // Close all open details smoothly
+  document.querySelectorAll('.for-item').forEach(c=>{
+    c.classList.remove('open');
+    c.querySelector('.for-item-hint').textContent=currentLang==='es'?'Expandir →':'Expand →';
+  });
+  document.querySelectorAll('.for-detail').forEach(d=>{
+    d.style.maxHeight='0';d.style.opacity='0';
+    setTimeout(()=>{if(d.style.maxHeight==='0px')d.innerHTML='';},500);
+  });
+  activeFor=wasOpen?-1:idx;
+  if(wasOpen)return;
+  // Open the clicked item's inline detail panel
+  document.querySelectorAll('.for-item')[idx].classList.add('open');
+  document.querySelectorAll('.for-item')[idx].querySelector('.for-item-hint').textContent=currentLang==='es'?'Cerrar ↑':'Close ↑';
+  const det=document.getElementById('for-detail-'+idx);
+  const inner=renderForPanel(idx);
+  det.innerHTML='';det.appendChild(inner);
+  det.style.opacity='0';det.style.maxHeight='0';
+  requestAnimationFrame(()=>{
+    const h=inner.scrollHeight+40+'px';
+    requestAnimationFrame(()=>{det.style.maxHeight=h;det.style.opacity='1';});
+    setTimeout(()=>{if(det.style.opacity==='1')det.style.maxHeight='none';},620);
+  });
+}
+function closeFor(){
+  document.querySelectorAll('.for-item').forEach(c=>{
+    c.classList.remove('open');
+    c.querySelector('.for-item-hint').textContent=currentLang==='es'?'Expandir →':'Expand →';
+  });
+  document.querySelectorAll('.for-detail').forEach(d=>{
+    d.style.maxHeight='0';d.style.opacity='0';
+    setTimeout(()=>{d.innerHTML='';},500);
+  });
+  activeFor=-1;
+}
+
+/* ── HERO CANVAS — ECG + cymatic + mouse field ── */
+(function(){
+  const c=document.getElementById('hero-cv');if(!c)return;
+  const ctx=c.getContext('2d');
+  let W,H,t=0,lmx=-999,lmy=-999;
+  function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
+  resize();window.addEventListener('resize',resize);
+  document.addEventListener('mousemove',e=>{
+    const r=c.getBoundingClientRect();
+    lmx=(e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom)?e.clientX-r.left:-999;
+    lmy=(lmx>0)?e.clientY-r.top:-999;
+  });
+
+  function heroCym(cx,cy,R,lobes,alpha,c1r,c1g,c1b,c2r,c2g,c2b){
+    const inC=lmx>0&&lmy>0;
+    const dist=inC?Math.hypot(lmx-cx,lmy-cy):9999;
+    const inf=dist<R*2.8?Math.pow(1-dist/(R*2.8),1.8)*0.42:0;
+    const nr=26;
+    for(let ri=1;ri<=nr;ri++){
+      const fr=ri/nr;
+      const base=R*fr*(1+0.04*Math.sin(t*.36-fr*3.8));
+      const A=(0.036+fr*fr*0.18)*(1+inf*0.35);
+      ctx.beginPath();
+      for(let i=0;i<=220;i++){
+        const ang=(i/220)*Math.PI*2;
+        const pv=pn(Math.cos(ang)*.3+ri*.3,Math.sin(ang)*.3+ri*.2,t*.03)*.03;
+        const m1=A*Math.cos(lobes*ang+t*.022+ri*.055);
+        const rr=base*(1+m1+pv);
+        const px=cx+Math.cos(ang)*rr,py=cy+Math.sin(ang)*rr*0.62;
+        i===0?ctx.moveTo(px,py):ctx.lineTo(px,py);
+      }
+      ctx.closePath();
+      const lum=Math.sin(fr*Math.PI)*.72+.28;
+      const cr=Math.round(c1r+(c2r-c1r)*fr),cg=Math.round(c1g+(c2g-c1g)*fr),cb=Math.round(c1b+(c2b-c1b)*fr);
+      ctx.strokeStyle=`rgba(${cr},${cg},${cb},${alpha*lum*(0.9+inf)})`;
+      ctx.lineWidth=0.4+inf*.14;ctx.stroke();
+    }
+    if(inf>0.05){
+      for(let ri=0;ri<4;ri++){
+        const prog=ri/4;const ringR=R*(0.3+prog*0.7)*inf;
+        ctx.beginPath();ctx.ellipse(cx,cy,ringR,ringR*0.62,0,0,Math.PI*2);
+        ctx.strokeStyle=`rgba(200,135,100,${(0.05+inf*0.1)*(1-prog)})`;ctx.lineWidth=1;ctx.stroke();
+      }
+    }
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    heroCym(W*.58,H*.44,Math.min(W,H)*.36,5,0.18,200,135,100,212,160,112);
+    heroCym(W*.82,H*.22,Math.min(W,H)*.12,6,0.10,184,159,224,200,135,100);
+
+    const ecgY=H*.44,ecgPeaks=[];
+    ctx.beginPath();
+    for(let x=0;x<=W;x++){
+      const nm=(x/W)*24+t*.36,beat=Math.sin(nm*4)>.96;
+      let y=ecgY;
+      if(beat){const l=(x%68)/68;const pH=Math.sin(l*Math.PI)*84*Math.max(0,1-Math.abs(l-.5)*4);y=ecgY-pH;if(pH>30)ecgPeaks.push({x,y,h:pH});}
+      else{y=ecgY+Math.sin(nm)*.38*9+_p(x/280,t*.015)*3;}
+      x===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    }
+    ctx.strokeStyle='rgba(200,135,100,0.58)';ctx.lineWidth=1.5;ctx.stroke();
+    ctx.strokeStyle='rgba(200,135,100,0.10)';ctx.lineWidth=8;ctx.stroke();
+
+    if(lmx>0&&lmy>0){
+      const isLtEcg=document.body.classList.contains('light');
+      const ecgC=isLtEcg?'184,106,62':'200,135,100';
+      ecgPeaks.forEach(pk=>{
+        const d=Math.hypot(lmx-pk.x,lmy-pk.y),reach=200;
+        const force=d<reach?Math.pow(1-d/reach,2.0):0;
+        if(force<0.008)return;
+        // Enhanced ripple rings — more visible wave field
+        for(let ri=0;ri<9;ri++){
+          const phase=(t*0.38+ri/9);
+          const expand=phase%1.0;
+          const ringR=(18+ri*22)*expand*(0.85+force*0.55)*force;
+          const alpha=force*(0.13+ri*0.008)*(1-expand*0.88)*(0.65+0.35*Math.sin(expand*Math.PI));
+          if(ringR<1||alpha<0.003)continue;
+          ctx.beginPath();ctx.ellipse(pk.x,pk.y,ringR,ringR*0.44,0,0,Math.PI*2);
+          ctx.strokeStyle=`rgba(${ecgC},${alpha})`;
+          ctx.lineWidth=0.55+force*0.35*(1-expand*0.7);ctx.stroke();
+        }
+        // Secondary slow rings for depth
+        for(let ri=0;ri<3;ri++){
+          const phase2=(t*0.18+ri/3+0.5);
+          const expand2=phase2%1.0;
+          const rR2=(60+ri*45)*expand2*force;
+          const a2=force*(0.05-ri*0.01)*(1-expand2);
+          if(rR2<1||a2<0.002)continue;
+          ctx.beginPath();ctx.ellipse(pk.x,pk.y,rR2,rR2*0.38,0,0,Math.PI*2);
+          ctx.strokeStyle=`rgba(${ecgC},${a2})`;
+          ctx.lineWidth=0.3;ctx.stroke();
+        }
+        // Center glow
+        const grd=ctx.createRadialGradient(pk.x,pk.y,0,pk.x,pk.y,60*force);
+        grd.addColorStop(0,`rgba(${ecgC},${0.08+force*0.12})`);
+        grd.addColorStop(0.5,`rgba(${ecgC},${0.03*force})`);
+        grd.addColorStop(1,`rgba(${ecgC},0)`);
+        ctx.fillStyle=grd;ctx.beginPath();ctx.ellipse(pk.x,pk.y,60*force,60*force*0.44,0,0,Math.PI*2);ctx.fill();
+      });
+      // Ambient cursor presence
+      const cG=ctx.createRadialGradient(lmx,lmy,0,lmx,lmy,70);
+      cG.addColorStop(0,`rgba(${ecgC},0.025)`);cG.addColorStop(1,`rgba(${ecgC},0)`);
+      ctx.fillStyle=cG;ctx.beginPath();ctx.arc(lmx,lmy,70,0,Math.PI*2);ctx.fill();
+    }
+    for(let i=0;i<16;i++){
+      const px=((i/16)*W+pn(i*.3,t*.07)*20+W)%W;
+      const py=H*.76+pn(i*.4+10,t*.055)*24;
+      ctx.beginPath();ctx.arc(px,py,.8,0,Math.PI*2);
+      ctx.fillStyle=`rgba(200,135,100,${.14+Math.sin(t+i)*.09})`;ctx.fill();
+    }
+    const isLt=document.body.classList.contains('light');
+    if(!isLt){
+      const bgC='rgba(8,11,17,';
+      const vg=ctx.createLinearGradient(0,0,W,0);
+      vg.addColorStop(0,bgC+'0.98)');vg.addColorStop(.3,'transparent');vg.addColorStop(1,bgC+'0.04)');
+      ctx.fillStyle=vg;ctx.fillRect(0,0,W,H);
+    }
+    t+=.013;requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── MEASUREMENT SECTION ECG ── */
+(function(){
+  const c=document.getElementById('mcv');if(!c)return;
+  const ctx=c.getContext('2d');let W,H,t=0;
+  function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
+  resize();window.addEventListener('resize',resize);
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    const ecgY=H*.5;
+    ctx.beginPath();
+    for(let x=0;x<=W;x++){
+      const nm=(x/W)*18+t*.22,beat=Math.sin(nm*4)>.97;
+      let y=ecgY;
+      if(beat){const l=(x%80)/80;y=ecgY-Math.sin(l*Math.PI)*44*Math.max(0,1-Math.abs(l-.5)*4);}
+      else{y=ecgY+Math.sin(nm)*.3*7+_p(x/320,t*.01)*2;}
+      x===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    }
+    ctx.strokeStyle='rgba(200,135,100,0.2)';ctx.lineWidth=1.2;ctx.stroke();
+    t+=.01;requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── FORM HANDLERS ── */
+function handleNL(e,form){
+  e.preventDefault();
+  fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}})
+    .then(r=>{
+      if(r.ok){form.innerHTML='<p style="font-family:\'DM Mono\',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-align:center;padding:16px;">You\'re on the list. Welcome to the field.</p>';}
+      else{alert('Something went wrong. Please email anaivivcaro@gmail.com directly.');}
+    }).catch(()=>alert('Network error. Please try again.'));
+}
+
+/* ── CLINICAL INDICATIONS — accordion toggle ── */
+function toggleInd(card){
+  const body=card.querySelector('.ind-body');
+  const hint=card.querySelector('.ind-hint');
+  const isOpen=card.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.ind-card').forEach(c=>{
+    c.classList.remove('open');
+    const b=c.querySelector('.ind-body');const h=c.querySelector('.ind-hint');
+    if(b){b.style.maxHeight='0';b.style.opacity='0';}
+    if(h)h.textContent='Expand →';
+  });
+  if(!isOpen){
+    card.classList.add('open');
+    const h=body.scrollHeight+'px';
+    requestAnimationFrame(()=>{body.style.maxHeight=h;body.style.opacity='1';});
+    setTimeout(()=>{if(card.classList.contains('open'))body.style.maxHeight='none';},520);
+    hint.textContent='Close ↑';
+  }
+}
+
+function handleNLc(e,form){
+  e.preventDefault();
+  fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}})
+    .then(r=>{
+      if(r.ok){form.innerHTML='<p style="font-family:\'DM Mono\',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);padding:12px;">You\'re on the list ✦</p>';}
+      else{alert('Something went wrong. Please email anaivivcaro@gmail.com');}
+    }).catch(()=>alert('Network error. Please try again.'));
+}
+function toggleTheme(){
+  const isLight=document.body.classList.toggle('light');
+  const icon=document.getElementById('theme-icon');
+  if(icon)icon.textContent=isLight?'🌙':'☀';
+}
+
+/* ── FOOTER AWE SPIRAL — same animation as nav logo ── */
+(function(){
+  const c=document.getElementById('footer-awe-cv');if(!c)return;
+  const ctx=c.getContext('2d');
+  const CW=96,CH=50,cx=CW/2,cy=CH/2;
+  let t=0,hov=false,hStr=0;
+  const wrap=c.parentElement;
+  if(wrap){wrap.addEventListener('mouseenter',()=>hov=true);wrap.addEventListener('mouseleave',()=>hov=false);}
+  function spiralPt(fr,rxMax,ryMax,tOff){
+    const ang=fr*3.2*Math.PI*2;
+    const org=0.018*Math.sin(ang*2.5+tOff*0.25)+0.010*Math.cos(ang*4-tOff*0.18);
+    return{x:cx+Math.cos(ang)*rxMax*fr*(1+org),y:cy+Math.sin(ang)*ryMax*fr*(1+org*0.7)};
+  }
+  function draw(){
+    ctx.clearRect(0,0,CW,CH);
+    hStr+=(hov?1:-1)*0.055;hStr=Math.max(0,Math.min(1,hStr));
+    const pulse=0.5+0.5*Math.sin(t*0.72+1.4);// offset phase from nav spiral
+    const pulseS=1.0+pulse*0.055;
+    const rx=(CW/2+1.5+hStr*0.8)*pulseS,ry=(CH/2+1.5+hStr*0.6)*pulseS,steps=320;
+    const spiralA=0.72+pulse*0.28;
+    ctx.beginPath();
+    for(let i=0;i<=steps;i++){const fr=i/steps;const pt=spiralPt(fr,rx,ry,t);i===0?ctx.moveTo(pt.x,pt.y):ctx.lineTo(pt.x,pt.y);}
+    const grad=ctx.createLinearGradient(cx-rx,cy,cx+rx,cy);
+    grad.addColorStop(0,'rgba(200,135,100,0.0)');grad.addColorStop(0.3,`rgba(200,135,100,${0.12*spiralA})`);
+    grad.addColorStop(0.65,`rgba(217,154,126,${0.38*spiralA})`);grad.addColorStop(0.88,`rgba(184,159,224,${0.26*spiralA})`);
+    grad.addColorStop(1,'rgba(200,135,100,0.0)');
+    ctx.strokeStyle=grad;ctx.lineWidth=(hov?1.15:0.85)*(0.88+pulse*0.18);ctx.lineCap='round';ctx.stroke();
+    const beadFr=((t*0.028)%1.0);
+    const beadPt=spiralPt(beadFr,rx,ry,t);
+    const TRAIL=0.055,TRAIL_STEPS=22;
+    ctx.beginPath();
+    for(let j=0;j<=TRAIL_STEPS;j++){
+      const jfr=Math.max(0.001,beadFr-TRAIL+(j/TRAIL_STEPS)*TRAIL);
+      const jpt=spiralPt(jfr,rx,ry,t);
+      j===0?ctx.moveTo(jpt.x,jpt.y):ctx.lineTo(jpt.x,jpt.y);
+    }
+    const trailGrd=ctx.createLinearGradient(spiralPt(Math.max(0.001,beadFr-TRAIL),rx,ry,t).x,spiralPt(Math.max(0.001,beadFr-TRAIL),rx,ry,t).y,beadPt.x,beadPt.y);
+    trailGrd.addColorStop(0,'rgba(200,135,100,0)');trailGrd.addColorStop(1,`rgba(220,155,110,${0.72+hStr*0.18})`);
+    ctx.strokeStyle=trailGrd;ctx.lineWidth=1.3+hStr*0.3;ctx.stroke();
+    const beadR2=6+hStr*2.5+pulse*1.2;
+    const bGrd=ctx.createRadialGradient(beadPt.x,beadPt.y,0,beadPt.x,beadPt.y,beadR2);
+    bGrd.addColorStop(0,`rgba(255,210,170,${0.88+hStr*0.08+pulse*0.12})`);
+    bGrd.addColorStop(0.45,`rgba(200,135,100,${0.48+hStr*0.15+pulse*0.12})`);
+    bGrd.addColorStop(1,'rgba(200,135,100,0)');
+    ctx.fillStyle=bGrd;ctx.beginPath();ctx.arc(beadPt.x,beadPt.y,beadR2,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='rgba(255,230,195,0.98)';ctx.beginPath();ctx.arc(beadPt.x,beadPt.y,1.6+pulse*0.3,0,Math.PI*2);ctx.fill();
+    t+=0.016;requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── LANGUAGE TOGGLE — ES / EN ── */
+let currentLang='en';
+
+/* Spanish FOR_DATA */
+const FOR_DATA_ES=[
+  {icon:'⚕',title:'Psicoterapeutas y Psiquiatras',
+   body:'Integra estados no ordinarios en la práctica individual y grupal. Awe Field ofrece un marco estructurado y basado en evidencia para introducir estados alterados en la psicoterapia de orientación profunda — con medidas de resultado validadas, informes clínicos y pleno control del profesional en cada paso. El protocolo se adapta a tu modalidad existente — psicodinámica, somática o integrativa — sin reemplazar tu marco de trabajo.',
+   tags:['Terapia profunda','Práctica grupal','PTSD','Trauma','Resultados clínicos'],
+   callout:'"Awe Field te permite trabajar a profundidades antes solo accesibles mediante intervención farmacológica — de forma segura, medible y dentro de tu marco clínico existente."'},
+  {icon:'◈',title:'Proveedores de Medicina Psicodélica',
+   body:'Usa Awe Field como protocolo de preparación e integración clínicamente riguroso en torno a sesiones de ketamina, psilocibina o MDMA-AT. Familiariza a los pacientes con los estados no ordinarios antes de la intervención farmacológica, reduciendo las reacciones adversas y la ansiedad por disolución del ego. Tras la sesión, el protocolo de integración extiende la ventana de neuroplasticidad — profundizando y consolidando los logros terapéuticos.',
+   tags:['Psilocibina','Ketamina','MDMA-AT','Preparación','Integración'],
+   callout:'"Los pacientes que llegan conociendo su paisaje interior experimentan significativamente menos reacciones adversas y ganancias terapéuticas más profundas en su sesión asistida con psicodélicos."'},
+  {icon:'◯',title:'Facilitadores de Retiros y Ceremonias',
+   body:'Ofrece a los participantes un viaje seguro y sin sustancias hacia estados alterados dentro de tu formato de retiro. Awe Field proporciona estructura clínica, medibilidad y fundamento para el profesional en experiencias grupales inmersivas — permitiéndote ofrecer trabajo de orientación profunda con protocolos de seguridad completos, monitoreo de HRV y resultados documentados.',
+   tags:['Sesiones grupales','Formatos de retiro','Sin sustancias','Ceremonia','Integración'],
+   callout:'"Lleva la profundidad del trabajo ceremonial a un formato completamente medible y clínicamente fundamentado — sin sustancias, sin contraindicaciones, sin riesgo regulatorio."'},
+  {icon:'◇',title:'Profesionales del Bienestar e Integrativo',
+   body:'Introduce trabajo de estados alterados de orientación profunda en la terapia somática, trabajo respiratorio, coaching y práctica holística — sin intervención farmacológica ni riesgo de contraindicación. Awe Field está diseñado para extender la profundidad de cualquier práctica de bienestar existente hacia lo no ordinario, con seguridad estructurada y resultados medibles.',
+   tags:['Terapia somática','Trabajo respiratorio','Coaching','Holístico','Integrativo'],
+   callout:'"El estado alterado no es solo para la psiquiatría clínica. Cualquier profesional que trabaje con la conexión mente-cuerpo puede ahora trabajar a esta profundidad — de forma segura y medible."'},
+  {icon:'⊕',title:'NHS y Salud Mental Comunitaria',
+   body:'Un protocolo escalable, entregable en grupo, compatible con las estructuras clínicas y los requisitos de documentación del NHS. Diseñado para pacientes resistentes al tratamiento donde los enfoques convencionales han alcanzado su límite — ofreciendo acceso de orientación profunda a una fracción del costo de la terapia individual asistida con psicodélicos. Totalmente compatible con el RGPD con informes clínicos exportables.',
+   tags:['Compatible NHS','Entrega grupal','Resistente al tratamiento','PTSD','Rentable'],
+   callout:'"A 1/10 del costo de la TAP individual, Awe Field hace accesible el trabajo de estados alterados a entornos de salud mental comunitaria y poblaciones que no pueden costear otra opción."'},
+  {icon:'∿',title:'Investigadores de la Conciencia',
+   body:'Awe Field proporciona un método controlado, documentado y reproducible para inducir estados alterados — con biometría de HRV, análisis lingüístico y medidas de resultado estandarizadas incorporadas. Diseñado para investigadores que necesitan un protocolo de inducción de estados alterados seguro y sin sustancias con captura completa de datos, documentación compatible con ética y seguridad del participante en cada fase.',
+   tags:['Investigación','HRV','Análisis lingüístico','Reproducible','Aprobado éticamente'],
+   callout:'"Un protocolo de inducción de estados alterados sin sustancias con biometría y análisis lingüístico incorporados — diseñado para investigación de conciencia ética, reproducible y auditable."'}
+];
+
+const TRANS={
+  en:{
+    'nav-protocol':'Protocol','nav-about':'About','nav-science':'Science',
+    'nav-music':'Music','nav-licensing':'Licensing','nav-events':'Events','nav-contact':'Contact',
+    'hero-eyebrow':'Evidence-based acoustic therapy protocol',
+    'hero-title':'Access the altered state.<br/><em>Without substances.</em>',
+    'hero-state':'"The altered state is not a side effect — it is the mechanism. Every breakthrough, every integration, every transformation happens there."',
+    'hero-body':'Awe Field is a practitioner-led protocol using sound and music to induce non-ordinary states of consciousness — a clinically structured preparation pathway for psychedelic-assisted therapy, and a standalone intervention for PTSD, anxiety, and depression.',
+    'hero-badge':'Awe Field · Safety-First · GDPR Compliant',
+    'hm1-n':'Personalised','hm1-l':'By trait, resilience &amp; therapeutic goal',
+    'hm2-n':'Real-Time HRV','hm2-l':'Adaptive sonic modulation per session',
+    'hm3-n':'Measurable','hm3-l':'Clinical outcomes you can document',
+    'hero-btn1':'Request Clinical Demo','hero-btn2':'View Protocol',
+    'what-label':'What is Awe Field?',
+    'what-title':'A structured clinical<br/>protocol for<br/><em>altered states</em>',
+    'what-body':'Awe Field bridges the gap between talk therapy and psychedelic-assisted treatment — using sound, music, and biofeedback to guide patients through non-ordinary states of consciousness in a fully practitioner-controlled environment.<br/><br/>Not an experience. A clinical tool — built for the practitioners working at the frontier of mental health.',
+    'wp1-title':'Safe &amp; Substance-Free','wp1-body':'Accesses depth-oriented altered states without pharmacological intervention, fully guided by the clinician at every step. No contraindications, no regulatory barriers.',
+    'wp2-title':'Clinically Measurable','wp2-body':'HRV monitoring, validated resilience scales, and language pattern analysis generate outcomes you can document, defend, and report to insurers and institutions.',
+    'wp3-title':'Preparation &amp; Integration','wp3-body':'A powerful standalone intervention and the ideal preparation and integration pathway for psychedelic-assisted therapy — extending the therapeutic window before and after each session.',
+    'wp4-title':'Practitioner-Led','wp4-body':'You remain in control of every aspect of the session — depth, pacing, and closure. The protocol adapts to your client, not the other way around.',
+    'for-label':'Designed for','for-title':'Who practises with Awe Field',
+    'for-sub':'From clinical psychiatry to ceremony facilitation — built for every practitioner working at the edge of consciousness and healing. Select your practice to explore how Awe Field fits.',
+    'for-item-0':'Psychotherapists &amp; Psychiatrists','for-item-1':'Psychedelic Medicine Providers',
+    'for-item-2':'Retreat &amp; Ceremony Facilitators','for-item-3':'Wellness &amp; Integrative Practitioners',
+    'for-item-4':'NHS &amp; Community Mental Health','for-item-5':'Consciousness Researchers',
+    'for-demo-btn':'Request Clinical Demo',
+    'ind-label':'Clinical indications','ind-title':'Where Awe Field<br/><em>fits your practice</em>',
+    'ind01-cn':'Indication 01','ind01-ct':'Psychedelic-assisted therapy<br/><em>preparation &amp; integration</em>',
+    'ind01-body':'Before any pharmacological intervention, Awe Field familiarises patients with non-ordinary states — reducing adverse reactions, ego-dissolution anxiety, and treatment resistance. Patients arrive knowing their inner landscape.<br/><br/>Post-session, the integration protocol significantly extends the window of neuroplasticity following a psychedelic experience.',
+    'ind02-cn':'Indication 02','ind02-ct':'Standalone intervention<br/><em>PTSD · Anxiety · Depression</em>',
+    'ind02-body':'For patients for whom psychedelic-assisted therapy is contraindicated, financially inaccessible, or personally undesired, Awe Field provides comparable depth via acoustic induction alone.<br/><br/>Emotional release and grief protocols access stored somatic memory without verbal articulation — particularly effective for complex PTSD and high alexithymia.',
+    'ind03-cn':'Indication 03','ind03-ct':'Group &amp; community<br/><em>therapeutic settings</em>',
+    'ind03-body':'Individual psychedelic therapy costs £2,000–£10,000 per course. Awe Field offers a clinically credible alternative — synchronised communal sessions for groups of up to ten.<br/><br/>Designed for community clinics, residential treatment, NHS group therapy settings, and retreat environments.',
+    'ind04-cn':'Indication 04','ind04-ct':'Patients who cannot or will not<br/><em>use psychedelics</em>',
+    'ind04-body':'Contraindications — including personal history of psychosis, schizophrenia spectrum conditions, or patient preference — exclude a large population from depth-oriented altered-state work.<br/><br/>Awe Field provides a safe, graded, fully practitioner-guided pathway for these populations.',
+    'ind-maxim':'Awe Field does not aim to maximise intensity.<br/>It aims to optimise safety, readiness, and integration.',
+    'ind-btn':'View Protocol →',
+    'proof-n1':'87%','proof-l1':'Patients access material unreachable via talk therapy alone','proof-c1':'Carhart-Harris et al., 2018',
+    'proof-n2':'3.6×','proof-l2':'Decrease in stress scores over a structured programme','proof-c2':'Csikszentmihalyi — ESM',
+    'proof-n3':'40%','proof-l3':'Reduction in PTSD symptom severity — standalone protocol','proof-c3':'Bradt &amp; Dileo, 2010 · Cochrane',
+    'proof-n4':'1/10th','proof-l4':'The cost of individual psychedelic-assisted therapy','proof-c4':'MAPS PAT analysis, 2023',
+    'meas-label':'Clinical measurement','meas-title':'Outcomes you can<br/><em>document and defend</em>',
+    'mc1-badge':'Resilience Scale','mc1-title':'Trait change in coping mechanisms',
+    'mc1-body':'The resilience scale is administered at intake, mid-programme, and close. Delta scores provide a peer-reviewed outcome metric suitable for clinical records, insurance submissions, and research contribution.',
+    'mc2-badge':'HRV','mc2-title':'Heart Rate Variability Monitoring',
+    'mc2-body':'Optional integration with consumer wearables (Apple Watch, Garmin, Polar). Reads autonomic state in real time and adapts integration questioning depth — containment or depth, based on patient\'s live state.',
+    'mc3-badge':'NLP','mc3-title':'Language Pattern Analysis',
+    'mc3-body':'Every word spoken during integration is analysed for semantic proximity to the stated therapeutic intention. The system tracks linguistic evolution — from avoidance to embodiment, from past to present.',
+    'pos-label':'Why Awe Field','pos-title':'Where Awe Field sits<br/><em>in the clinical landscape</em>',
+    'posb':'Awe Field is not a replacement for psychedelic-assisted therapy. It is the pathway that makes it safer, more effective, and more accessible — and a standalone intervention for patients who cannot or do not want to go pharmacological.',
+    'pos-table':'<thead><tr><th>Dimension</th><th>Awe Field</th><th>Standard PAT</th><th>Talk Therapy</th></tr></thead><tbody><tr><td>Somatic memory access</td><td class="ck">✓</td><td class="ck">✓</td><td class="cx">Limited</td></tr><tr><td>Pre-verbal material</td><td class="ck">✓</td><td class="ck">✓</td><td class="cx">—</td></tr><tr><td>No substance required</td><td class="ck">✓</td><td class="cx">—</td><td class="ck">✓</td></tr><tr><td>Validated measurement</td><td class="ck">✓</td><td class="cx">Partial</td><td class="ck">✓</td></tr><tr><td>Group delivery</td><td class="ck">✓</td><td class="cx">Rare</td><td class="ck">✓</td></tr><tr><td>Cost per patient</td><td class="ck">Low</td><td class="cx">£2–10k</td><td>Medium</td></tr><tr><td>Depth of altered state</td><td class="ck">High</td><td class="ck">High</td><td class="cx">Low</td></tr></tbody>',
+    'mf-label':'The mechanism',
+    'mf-title':'Emotional processing, clarity,<br/>and insight happen<br/><em>in the altered state.</em>',
+    'mf-body1':'Ordinary waking consciousness is not where transformation occurs. <strong>The altered state is.</strong> Every major therapeutic breakthrough — the moment a patient finally accesses grief, integrates trauma, or sees their life with radical clarity — happens when the ordinary filters of the mind have shifted.',
+    'mf-body2':'Psychedelics have made this universally understood. But the substance is not the only path to the state. <strong>Awe Field induces the altered state through sound, structure, and intention</strong> — safely, measurably, and under full practitioner control.',
+    'mf-body3':'Your clients need that state. Awe Field provides it — without the substance.',
+    'cta-label':'Founding Cohort · Limited Places',
+    'cta-title':'Are you ready to work<br/><em>at the edge of what\'s possible?</em>',
+    'cta-p':'A small number of practitioners are shaping how Awe Field enters clinical practice. Early cohort members receive direct access to the founding team, early pricing, and meaningful influence over the protocol\'s development.',
+    'ctabi1':'Founding-cohort pricing — significantly reduced launch rate',
+    'ctabi2':'Shape the protocol — your clinical feedback drives development',
+    'ctabi3':'Priority access to every future tool and research output',
+    'ctabi4':'Direct line to the founding team throughout',
+    'ctan':'GDPR compliant · Wearable integration · Practitioner dashboard · Clinical licensing available',
+    'cta-btn1':'Request Clinical Demo','cta-btn2':'Join Our Early Access Programme',
+    'nl-label':'Stay in the field',
+    'nl-title':'Research, insights,<br/><em>and early access announcements</em>',
+    'nl-sub':'Join clinicians, researchers, and facilitators following the frontier of altered states therapy. No noise — only what matters.',
+    'nl-btn':'Join the list →',
+    'nl-note':'No spam. Unsubscribe anytime. Your data is never shared.',
+    'nl-email-ph':'your@email.com',
+    'contact-title':'Let\'s talk about<br/><em>what\'s possible</em>',
+    'contact-btn':'Send Message →',
+    'con-label':'Contact','con-intro':'We would love to hear from you — whether you are a clinician, retreat facilitator, researcher, or musician interested in the frontier of altered states therapy.',
+    'con-lbl-name':'Full name','con-lbl-email':'Email address','con-lbl-role':'Your role',
+    'con-lbl-int':'What brings you to Awe Field?','con-lbl-msg':'Tell us more',
+    'con-nl-check':'Add me to the Awe Field newsletter',
+    'con-note':'We aim to respond within 48 hours. All enquiries are treated with complete confidentiality.',
+    'proto-label':'The clinical protocol',
+    'proto-title':'End-to-end structured pathway —<br/><em>intake through to programme report</em>',
+    'sn1':'Step 01','st1':'<em>Patient baseline</em> assessment',
+    'sb1':'Validated intake using a resilience scale, prior altered-state experience scoring across five domains, and trait-level psychological profiling. Generates a clinical readiness score and recommended entry pathway.',
+    'sn2':'Step 02','st2':'<em>Intention setting</em> &amp; plan generation',
+    'sb2':'The client selects from five clinical intention pathways, or co-creates a specific therapeutic focus with the therapist. The system generates a personalised programme.',
+    'sn3':'Step 03','st3':'<em>Session</em> — induction to close',
+    'sb3':'Mood assessment, somatic activation, a personalised music journey with optional voice recording, and reflective prompts. HRV monitoring via wearable if enabled.',
+    'sn4':'Step 04','st4':'<em>AI-guided integration</em> — 5 dimensions',
+    'sb4':'Post-session integration across somatic, visual, auditory, relational, and memory dimensions — cross-referencing in-session voice recordings.',
+    'sn5':'Step 05 · Programme Close','st5':'<em>Clinical report</em> — outcomes &amp; recommendations',
+    'sb5':'At programme close, Awe Field produces a comprehensive clinical report: HRV trajectory, peak moment mapping, language pattern analysis, resilience scale delta, and continuation pathway.',
+    'req-demo-btn':'Request Clinical Demo',
+    'about-label':'About &amp; Advisory','about-title':'The people and ideas<br/><em>behind Awe Field</em>',
+    'about-dev-label':'Developed by',
+    'founder-role':'Product Designer &amp; Founder',
+    'founder-bio':'Awe Field was born through Viviana Caro\'s PhD research on the neuroaesthetics of immersive sound — an inquiry into how structured acoustic environments can alter the way we perceive ourselves, access memory, and navigate altered states of consciousness.<br/><br/>Her work integrates principles from neuroaesthetics, consciousness studies, and immersive experience design to create measurable, non-pharmacological pathways with an emphasis on safety, personalisation, and clinical applicability.',
+    'adv-label':'Advisory network',
+    'adv1-bio':'Researcher in psychology and consciousness studies with a particular focus on altered states, psychedelics, and anomalous experiences. His work explores the phenomenology and therapeutic potential of non-ordinary states.',
+    'adv2-bio':'Consciousness innovator and product leader specialising in neurophysiological sensing, adaptive feedback systems, and experience design. Speaker on neurotechnology ethics and human potential.',
+    'adv3-bio':'Acousmatic composer and academic specialising in immersive and spatial sound. Programme Leader for the MA Music &amp; Sound Design at the University of Greenwich.',
+    'research-title':'The research<br/><em>foundations</em>',
+    'framework-title':'A framework for<br/><em>navigating altered states.</em>',
+    'about-cta-h':'Ready to explore<br/><em style="color:var(--gold2);">what Awe Field can offer?</em>',
+    'about-cta-btn':'Get in Touch',
+    'sci-label':'Evidence base','sci-title':'The science behind<br/><em>Awe Field</em>',
+    'sci-sub':'Awe Field is grounded in peer-reviewed research across music therapy, altered states neuroscience, HRV biofeedback, and consciousness studies.',
+    'sci-areas':'Key research areas',
+    'sci1-cn':'Music &amp; Altered States','sci1-ct':'How music induces<br/><em>non-ordinary states</em>',
+    'sci1-body':'Research by Kaelen et al. (2015, 2018) demonstrates that music is a primary driver of the subjective experience in psychedelic therapy — including emotional breakthrough, imagery, and oceanic boundlessness. Music-evoked altered states share neural signatures with pharmacologically induced ones.',
+    'sci2-cn':'HRV &amp; Autonomic State','sci2-ct':'Heart Rate Variability<br/><em>as a clinical window</em>',
+    'sci2-body':'Thayer et al. (2012) established HRV as a validated proxy for autonomic nervous system flexibility — directly linked to emotional regulation, cognitive flexibility, and therapeutic readiness. Real-time HRV enables adaptive modulation of session depth and integration pacing.',
+    'sci3-cn':'PTSD &amp; Sound Therapy','sci3-ct':'Acoustic intervention<br/><em>for trauma processing</em>',
+    'sci3-body':'A Cochrane Review (Bradt &amp; Dileo, 2010) across 26 studies found music therapy produced significant reductions in PTSD symptom severity, anxiety, and depression. Sound-based interventions access somatic memory via pre-verbal pathways bypassed by standard cognitive approaches.',
+    'sci4-cn':'Language &amp; Integration','sci4-ct':'Semantic change as<br/><em>outcome measure</em>',
+    'sci4-body':'Pennebaker\'s LIWC framework (decades of research) shows that linguistic shifts — from past to present tense, from avoidance to embodiment — are reliable predictors of therapeutic integration. Awe Field\'s NLP layer tracks this evolution across the programme.',
+    'sci-maxim':'Awe Field is a synthesis of established clinical science — not a new-age experiment, but a structured application of peer-reviewed mechanisms.',
+    'mus-label':'Music &amp; Sound Design','mus-title':'A curated and adaptive<br/><em>sonic architecture</em>',
+    'mus-sub':'The Awe Field protocol draws from multiple musical and acoustic approaches — each selected based on its capacity to guide shifts in perception, emotion, and physiological state.',
+    'mus-approaches':'The sonic approaches',
+    'mus-grid':'<div class="mugc"><h3>Ambient &amp; Minimal Compositions</h3><p>For nervous system regulation and grounding — a stable acoustic container from which deeper states become accessible.</p></div><div class="mugc"><h3>Psychoacoustic Textures</h3><p>To influence spatial perception and internal focus. Sound that operates below the level of conscious attention.</p></div><div class="mugc"><h3>Rhythmic Entrainment</h3><p>To support state transitions and emotional processing. Tempo and rhythm as physiological tools calibrated to the specific phase of the journey.</p></div><div class="mugc"><h3>Harmonic &amp; Tonal Structures</h3><p>Designed to evoke tension, release, and resolution — moving emotional material without requiring narrative.</p></div><div class="mugc"><h3>Dynamic Soundscapes</h3><p>That evolve in response to the listener\'s physiological state. Sound as the primary guide through different depths of experience.</p></div><div class="mugc"><h3>Spatial &amp; Immersive Sound</h3><p>Drawing on electroacoustic composition and diffusion. The spatial dimension of sound as a therapeutic tool.</p></div>',
+    'mus-tgl':'"We are not looking for tracks.<br/>We are looking for states,<br/>translated into sound."',
+    'mus-artists':'If you are a musician, composer, or sound artist working with music that has the potential to evoke altered states, we would love to hear from you.<br/><br/>We are building a curated library prioritising depth over stimulation, intention over genre, and emotional impact over form.',
+    'mus-submit':'Submit Your Work',
+    'mus-demo-p':'Experience how Awe Field\'s curated sonic architecture works in a live clinical context.',
+    'lic-label':'Licensing','lic-title':'Awe Field as a clinical tool<br/><em>for your practice</em>',
+    'lic-sub':'Offered as a clinical tool for licensed practitioners and organisations. All licensing includes structured onboarding to ensure safe and effective use of the protocol.',
+    'lic-grid':'<div class="licc"><h3><em>Practitioner</em> Licensing</h3><p>Full platform access — patient management, session delivery, and integration tools.</p><div class="licl"><div class="licli">Full platform access</div><div class="licli">Patient management dashboard</div><div class="licli">Session delivery tools</div><div class="licli">AI integration guide</div><div class="licli">HRV wearable integration</div><div class="licli">Clinical reporting</div></div></div><div class="licc"><h3>Clinic &amp; <em>Institutional</em> Licensing</h3><p>Multi-user environments for clinics, retreats, and healthcare providers.</p><div class="licl"><div class="licli">Multi-practitioner accounts</div><div class="licli">Group session delivery</div><div class="licli">Communal integration circles</div><div class="licli">Institutional reporting</div><div class="licli">NHS and clinic compatible</div><div class="licli">Bespoke onboarding</div></div></div><div class="licc"><h3>Training &amp; <em>Onboarding</em></h3><p>Structured onboarding at every level of the organisation.</p><div class="licl"><div class="licli">Clinical framework training</div><div class="licli">Safety and contraindication screening</div><div class="licli">Integration facilitation training</div><div class="licli">Ongoing practitioner support</div></div></div>',
+    'eab-title':'Early Access <em>Programme</em>',
+    'eab-body':'Awe Field is currently in development. We are onboarding a limited number of clinicians for pilot testing at a reduced launch rate.',
+    'eab-list':'<div class="eali">Direct support from the founding team</div><div class="eali">Direct influence over product development</div><div class="eali">Early access pricing</div><div class="eali">Priority access to future clinical tools</div>',
+    'eab-btn':'Join Our Early Access Programme',
+    'pdf-title':'Protocol PDF',
+    'pdf-list':'<div class="pdfli">Patient intake and readiness assessment</div><div class="pdfli">Personalisation logic and pathway selection</div><div class="pdfli">Session architecture — induction, peak, integration</div><div class="pdfli">HRV integration and adaptive sonic modulation</div><div class="pdfli">AI-guided integration model across 5 dimensions</div><div class="pdfli">Clinical measurement and reporting structure</div><div class="pdfli">Safety considerations and practitioner guidelines</div>',
+    'pdf-btn':'Request Access',
+    'ev-label':'Events','ev-title':'Where you can<br/><em>experience Awe Field</em>',
+    'ev-sub':'Live demonstrations, clinical workshops, and immersive sessions for practitioners. Experience the protocol firsthand and speak directly with the founding team.',
+    'events-grid':'<div class="event-card"><div class="event-date">Coming soon · London</div><div class="event-title">Clinical Demonstration — Founding Cohort</div><div class="event-loc">Location TBC · London</div><div class="event-body">An intimate demonstration of the full Awe Field protocol for a select group of clinicians. Includes live HRV monitoring, guided session, and integration circle. Followed by Q&amp;A with the founding team.</div></div><div class="event-card"><div class="event-date">Coming soon · International</div><div class="event-title">Practitioner Workshop Series</div><div class="event-loc">Online &amp; In-person</div><div class="event-body">Structured training covering contraindication screening, session delivery, integration facilitation, and clinical reporting.</div></div><div class="event-card"><div class="event-date">Ongoing · Online</div><div class="event-title">Research Collaboration Calls</div><div class="event-loc">Video call</div><div class="event-body">Monthly calls for researchers and clinicians interested in contributing to Awe Field\'s ongoing evidence base.</div></div><div class="event-card"><div class="event-date">Stay informed</div><div class="event-title">Join the Mailing List</div><div class="event-loc">Awe Field · Clinical Division</div><div class="event-body">Be the first to hear about upcoming events, pilot programme openings, and new protocol developments.</div></div>',
+    'ev-reg-btn':'Register Interest in Events',
+    'footer-protocol':'Protocol','footer-about':'About','footer-music':'Music',
+    'footer-licensing':'Licensing','footer-events':'Events','footer-contact':'Contact',
+    'footer-copy':'© 2026 Awe Field · Clinical Division · All rights reserved',
+    'footer-love':'Created with love',
+    'sd1':'<div class="detail">Validated resilience scale + ASC scoring</div><div class="detail">Output: readiness tier + recommended protocol path</div>',
+    'sd2':'<div class="detail">Pathways: Deep Rest · Expanded Awareness · Creative Flow · Emotional Processing · Clarity</div>',
+    'sd3':'<div class="detail">Pre-session mood + personalised journey + HRV data</div>',
+    'sd4':'<div class="detail">Session fully recorded — accessible to patient and clinician</div>',
+    'sd5':'<div class="detail">HRV trajectory per session</div><div class="detail">Language pattern &amp; intention alignment</div><div class="detail">Resilience score delta</div><div class="detail">Peak moment biometric mapping</div><div class="detail">Continuation pathway recommendation</div><div class="detail">GDPR-compliant · Exportable PDF</div>',
+    'framework-col':'<h3 data-i18n="framework-title">A framework for<br/><em>navigating altered states.</em></h3><p>Awe Field is a regulated interface into altered states. A training ground for consciousness navigation. A clinical modulation system — not merely an experience.</p><p>Our mission: expand access to depth-oriented therapeutic work and create pathways for insight and transformation that are genuinely affordable.</p>',
+    'pdf-desc':'A complete document outlining the end-to-end framework for clinicians wanting to understand how Awe Field integrates into their existing practice.',
+    'pdflk':'⬤ &nbsp; Available to licensed practitioners on subscription',
+    'cdl-email':'Email','cdl-location':'Location','cdl-programmes':'Programmes',
+    'cdv-location':'London · Available internationally',
+    'cdv-programmes':'Clinical partnerships · Pilot programmes · Early access cohort',
+    'con-ph-name':'Dr. Jane Smith','con-ph-email':'jane@clinic.com',
+    'con-ph-msg':'Tell us about your practice and what you hope to explore with Awe Field...',
+    'con-nl-h3':'Research, insights &amp;<br/><em style="color:var(--gold2);font-style:italic;">early access announcements</em>',
+    'con-nl-p':'Join practitioners following the frontier of altered states therapy.<br/>No noise — only what matters.',
+    'con-nl-note':'No spam · Unsubscribe anytime',
+    'role-select':'<option value="">Select your role</option><option>Psychotherapist</option><option>Psychiatrist</option><option>Psychedelic-assisted therapy provider</option><option>Retreat / ceremony facilitator</option><option>Clinical researcher</option><option>Wellbeing practitioner</option><option>NHS / community mental health</option><option>Musician / sound artist</option><option>Other</option>',
+    'int-select':'<option value="">Select your interest</option><option>Clinical demo request</option><option>Early access / founding cohort</option><option>Retreat or ceremony integration</option><option>Research collaboration</option><option>Music / sound design collaboration</option><option>Institutional / clinic licensing</option><option>Events</option><option>General enquiry</option>',
+    'con-who':'<div class="cwhi">A clinician, psychiatrist, or psychedelic medicine provider</div><div class="cwhi">A retreat or ceremony facilitator exploring substance-free depth work</div><div class="cwhi">A wellness or integrative practitioner</div><div class="cwhi">A consciousness researcher or academic</div><div class="cwhi">A musician or sound artist interested in collaborating</div>',
+  },
+  es:{
+    'nav-protocol':'Protocolo','nav-about':'Nosotros','nav-science':'Ciencia',
+    'nav-music':'Música','nav-licensing':'Licencias','nav-events':'Eventos','nav-contact':'Contacto',
+    'hero-eyebrow':'Protocolo de terapia acústica basado en evidencia',
+    'hero-title':'Accede al estado alterado.<br/><em>Sin sustancias.</em>',
+    'hero-state':'"El estado alterado no es un efecto secundario — es el mecanismo. Todo avance, toda integración, toda transformación ocurre ahí."',
+    'hero-body':'Awe Field es un protocolo liderado por profesionales que usa sonido y música para inducir estados no ordinarios de conciencia — una vía de preparación clínicamente estructurada para la terapia asistida con psicodélicos, y una intervención autónoma para PTSD, ansiedad y depresión.',
+    'hero-badge':'Awe Field · Seguridad Primero · Compatible RGPD',
+    'hm1-n':'Personalizado','hm1-l':'Por rasgo, resiliencia y objetivo terapéutico',
+    'hm2-n':'HRV en tiempo real','hm2-l':'Modulación sónica adaptativa por sesión',
+    'hm3-n':'Medible','hm3-l':'Resultados clínicos que puedes documentar',
+    'hero-btn1':'Solicitar Demo Clínica','hero-btn2':'Ver Protocolo',
+    'what-label':'¿Qué es Awe Field?',
+    'what-title':'Un protocolo clínico<br/>estructurado para<br/><em>estados alterados</em>',
+    'what-body':'Awe Field tiende un puente entre la terapia conversacional y el tratamiento asistido con psicodélicos — usando sonido, música y biofeedback para guiar a los pacientes a través de estados no ordinarios de conciencia en un entorno totalmente controlado por el profesional.<br/><br/>No es una experiencia. Es una herramienta clínica — construida para los profesionales que trabajan en la frontera de la salud mental.',
+    'wp1-title':'Seguro y Sin Sustancias','wp1-body':'Accede a estados alterados de orientación profunda sin intervención farmacológica, totalmente guiado por el clínico en cada paso. Sin contraindicaciones, sin barreras regulatorias.',
+    'wp2-title':'Clínicamente Medible','wp2-body':'El monitoreo de HRV, las escalas de resiliencia validadas y el análisis de patrones lingüísticos generan resultados que puedes documentar, defender e informar a aseguradoras e instituciones.',
+    'wp3-title':'Preparación e Integración','wp3-body':'Una intervención autónoma poderosa y la vía ideal de preparación e integración para la terapia asistida con psicodélicos — extendiendo la ventana terapéutica antes y después de cada sesión.',
+    'wp4-title':'Liderado por el Profesional','wp4-body':'Tú mantienes el control de cada aspecto de la sesión — profundidad, ritmo y cierre. El protocolo se adapta a tu cliente, no al revés.',
+    'for-label':'Diseñado para','for-title':'Quién practica con Awe Field',
+    'for-sub':'Desde la psiquiatría clínica hasta la facilitación ceremonial — construido para cada profesional que trabaja en el límite de la conciencia y la sanación. Selecciona tu práctica para explorar cómo encaja Awe Field.',
+    'for-item-0':'Psicoterapeutas y Psiquiatras','for-item-1':'Proveedores de Medicina Psicodélica',
+    'for-item-2':'Facilitadores de Retiros y Ceremonias','for-item-3':'Profesionales del Bienestar e Integrativo',
+    'for-item-4':'NHS y Salud Mental Comunitaria','for-item-5':'Investigadores de la Conciencia',
+    'for-demo-btn':'Solicitar Demo Clínica',
+    'ind-label':'Indicaciones clínicas','ind-title':'Dónde encaja Awe Field<br/><em>en tu práctica</em>',
+    'ind01-cn':'Indicación 01','ind01-ct':'Terapia asistida con psicodélicos<br/><em>preparación e integración</em>',
+    'ind01-body':'Antes de cualquier intervención farmacológica, Awe Field familiariza a los pacientes con los estados no ordinarios — reduciendo las reacciones adversas, la ansiedad por disolución del ego y la resistencia al tratamiento. Los pacientes llegan conociendo su paisaje interior.<br/><br/>Tras la sesión, el protocolo de integración extiende significativamente la ventana de neuroplasticidad después de una experiencia psicodélica.',
+    'ind02-cn':'Indicación 02','ind02-ct':'Intervención autónoma<br/><em>PTSD · Ansiedad · Depresión</em>',
+    'ind02-body':'Para pacientes para quienes la terapia asistida con psicodélicos está contraindicada, es económicamente inaccesible o no es deseada, Awe Field proporciona una profundidad comparable solo mediante inducción acústica.<br/><br/>Los protocolos de liberación emocional y duelo acceden a la memoria somática almacenada sin articulación verbal — particularmente eficaz para PTSD complejo y alta alexitimia.',
+    'ind03-cn':'Indicación 03','ind03-ct':'Entornos terapéuticos<br/><em>grupales y comunitarios</em>',
+    'ind03-body':'La terapia psicodélica individual cuesta entre £2.000 y £10.000 por tratamiento. Awe Field ofrece una alternativa clínicamente creíble — sesiones comunales sincronizadas para grupos de hasta diez personas.<br/><br/>Diseñado para clínicas comunitarias, tratamiento residencial, entornos de terapia grupal del NHS y ambientes de retiro.',
+    'ind04-cn':'Indicación 04','ind04-ct':'Pacientes que no pueden o no quieren<br/><em>usar psicodélicos</em>',
+    'ind04-body':'Las contraindicaciones — incluidos antecedentes personales de psicosis, condiciones del espectro esquizofrénico o preferencia del paciente — excluyen a una gran población del trabajo de estados alterados orientado a la profundidad.<br/><br/>Awe Field proporciona una vía segura, gradual y totalmente guiada por el profesional para estas poblaciones.',
+    'ind-maxim':'Awe Field no busca maximizar la intensidad.<br/>Busca optimizar la seguridad, la disposición y la integración.',
+    'ind-btn':'Ver Protocolo →',
+    'proof-n1':'87%','proof-l1':'Pacientes acceden a material inaccesible mediante la terapia conversacional','proof-c1':'Carhart-Harris et al., 2018',
+    'proof-n2':'3.6×','proof-l2':'Reducción en puntuaciones de estrés en un programa estructurado','proof-c2':'Csikszentmihalyi — ESM',
+    'proof-n3':'40%','proof-l3':'Reducción en la gravedad de síntomas de PTSD — protocolo autónomo','proof-c3':'Bradt &amp; Dileo, 2010 · Cochrane',
+    'proof-n4':'1/10','proof-l4':'El costo de la terapia individual asistida con psicodélicos','proof-c4':'Análisis PAT MAPS, 2023',
+    'meas-label':'Medición clínica','meas-title':'Resultados que puedes<br/><em>documentar y defender</em>',
+    'mc1-badge':'Escala de Resiliencia','mc1-title':'Cambio en mecanismos de afrontamiento',
+    'mc1-body':'La escala de resiliencia se administra al inicio, a mitad del programa y al cierre. Las puntuaciones delta proporcionan una métrica de resultado revisada por pares, adecuada para registros clínicos, presentaciones a seguros e investigación.',
+    'mc2-badge':'HRV','mc2-title':'Monitoreo de Variabilidad de la Frecuencia Cardíaca',
+    'mc2-body':'Integración opcional con wearables de consumo (Apple Watch, Garmin, Polar). Lee el estado autonómico en tiempo real y adapta la profundidad del cuestionamiento de integración — contención o profundidad, según el estado en vivo del paciente.',
+    'mc3-badge':'PLN','mc3-title':'Análisis de Patrones Lingüísticos',
+    'mc3-body':'Cada palabra pronunciada durante la integración se analiza por proximidad semántica a la intención terapéutica establecida. El sistema rastrea la evolución lingüística — de la evitación a la encarnación, del pasado al presente.',
+    'pos-label':'Por qué Awe Field','pos-title':'Dónde se sitúa Awe Field<br/><em>en el panorama clínico</em>',
+    'posb':'Awe Field no es un reemplazo para la terapia asistida con psicodélicos. Es la vía que la hace más segura, más efectiva y más accesible — y una intervención autónoma para pacientes que no pueden o no quieren optar por lo farmacológico.',
+    'pos-table':'<thead><tr><th>Dimensión</th><th>Awe Field</th><th>PAT Estándar</th><th>Terapia Conversacional</th></tr></thead><tbody><tr><td>Acceso a memoria somática</td><td class="ck">✓</td><td class="ck">✓</td><td class="cx">Limitado</td></tr><tr><td>Material pre-verbal</td><td class="ck">✓</td><td class="ck">✓</td><td class="cx">—</td></tr><tr><td>Sin sustancia requerida</td><td class="ck">✓</td><td class="cx">—</td><td class="ck">✓</td></tr><tr><td>Medición validada</td><td class="ck">✓</td><td class="cx">Parcial</td><td class="ck">✓</td></tr><tr><td>Entrega grupal</td><td class="ck">✓</td><td class="cx">Raro</td><td class="ck">✓</td></tr><tr><td>Costo por paciente</td><td class="ck">Bajo</td><td class="cx">£2–10k</td><td>Medio</td></tr><tr><td>Profundidad del estado alterado</td><td class="ck">Alto</td><td class="ck">Alto</td><td class="cx">Bajo</td></tr></tbody>',
+    'mf-label':'El mecanismo',
+    'mf-title':'El procesamiento emocional, la claridad<br/>y la perspectiva ocurren<br/><em>en el estado alterado.</em>',
+    'mf-body1':'La conciencia vigil ordinaria no es donde ocurre la transformación. <strong>El estado alterado sí.</strong> Cada gran avance terapéutico — el momento en que un paciente finalmente accede a su dolor, integra un trauma o ve su vida con claridad radical — ocurre cuando los filtros ordinarios de la mente se han desplazado.',
+    'mf-body2':'Los psicodélicos han hecho esto universalmente comprensible. Pero la sustancia no es el único camino al estado. <strong>Awe Field induce el estado alterado a través del sonido, la estructura y la intención</strong> — de forma segura, medible y bajo pleno control del profesional.',
+    'mf-body3':'Tus clientes necesitan ese estado. Awe Field lo proporciona — sin la sustancia.',
+    'cta-label':'Cohorte Fundadora · Plazas Limitadas',
+    'cta-title':'¿Estás listo para trabajar<br/><em>en el límite de lo posible?</em>',
+    'cta-p':'Un número reducido de profesionales está dando forma a cómo Awe Field entra en la práctica clínica. Los miembros del cohorte fundador reciben acceso directo al equipo fundador, precios anticipados e influencia significativa en el desarrollo del protocolo.',
+    'ctabi1':'Precio de cohorte fundadora — tarifa de lanzamiento significativamente reducida',
+    'ctabi2':'Da forma al protocolo — tu retroalimentación clínica impulsa el desarrollo',
+    'ctabi3':'Acceso prioritario a todas las herramientas e investigaciones futuras',
+    'ctabi4':'Línea directa con el equipo fundador durante todo el proceso',
+    'ctan':'Compatible con RGPD · Integración de wearables · Panel del profesional · Licencia clínica disponible',
+    'cta-btn1':'Solicitar Demo Clínica','cta-btn2':'Unirse al Programa de Acceso Anticipado',
+    'nl-label':'Mantente en el campo',
+    'nl-title':'Investigación, perspectivas<br/><em>y anuncios de acceso anticipado</em>',
+    'nl-sub':'Únete a clínicos, investigadores y facilitadores que siguen la frontera de la terapia de estados alterados. Sin ruido — solo lo que importa.',
+    'nl-btn':'Unirse a la lista →',
+    'nl-note':'Sin spam. Cancela en cualquier momento. Tus datos nunca se comparten.',
+    'nl-email-ph':'tu@email.com',
+    'contact-title':'Hablemos sobre<br/><em>lo que es posible</em>',
+    'contact-btn':'Enviar Mensaje →',
+    'con-label':'Contacto','con-intro':'Nos encantaría saber de ti — seas clínico, facilitador de retiros, investigador o músico interesado en la frontera de la terapia de estados alterados.',
+    'con-lbl-name':'Nombre completo','con-lbl-email':'Dirección de correo electrónico','con-lbl-role':'Tu rol',
+    'con-lbl-int':'¿Qué te trae a Awe Field?','con-lbl-msg':'Cuéntanos más',
+    'con-nl-check':'Añádeme al boletín de Awe Field',
+    'con-note':'Nos comprometemos a responder en 48 horas. Todas las consultas se tratan con total confidencialidad.',
+    'proto-label':'El protocolo clínico',
+    'proto-title':'Vía estructurada de extremo a extremo —<br/><em>desde la evaluación hasta el informe del programa</em>',
+    'sn1':'Paso 01','st1':'Evaluación <em>basal</em> del paciente',
+    'sb1':'Evaluación de entrada validada usando una escala de resiliencia, puntuación de experiencia previa en estados alterados en cinco dominios y perfil psicológico de rasgos. Genera una puntuación de preparación clínica y la vía de entrada recomendada.',
+    'sn2':'Paso 02','st2':'<em>Establecimiento de intención</em> y generación de plan',
+    'sb2':'El cliente selecciona entre cinco vías de intención clínica, o co-crea un enfoque terapéutico específico con el terapeuta. El sistema genera un programa personalizado.',
+    'sn3':'Paso 03','st3':'<em>Sesión</em> — de la inducción al cierre',
+    'sb3':'Evaluación del estado de ánimo, activación somática, un viaje musical personalizado con grabación de voz opcional y preguntas reflexivas. Monitoreo de HRV mediante wearable si está habilitado.',
+    'sn4':'Paso 04','st4':'<em>Integración guiada por IA</em> — 5 dimensiones',
+    'sb4':'Integración post-sesión en dimensiones somática, visual, auditiva, relacional y de memoria — con referencia cruzada a grabaciones de voz durante la sesión.',
+    'sn5':'Paso 05 · Cierre del Programa','st5':'<em>Informe clínico</em> — resultados y recomendaciones',
+    'sb5':'Al cierre del programa, Awe Field produce un informe clínico completo: trayectoria de HRV, mapeo de momentos pico, análisis de patrones lingüísticos, delta de escala de resiliencia y vía de continuación.',
+    'req-demo-btn':'Solicitar Demo Clínica',
+    'about-label':'Sobre Nosotros y Consejo Asesor','about-title':'Las personas e ideas<br/><em>detrás de Awe Field</em>',
+    'about-dev-label':'Desarrollado por',
+    'founder-role':'Diseñadora de Producto &amp; Fundadora',
+    'founder-bio':'Awe Field nació a través de la investigación doctoral de Viviana Caro sobre la neuroestética del sonido inmersivo — una indagación sobre cómo los entornos acústicos estructurados pueden alterar la forma en que nos percibimos a nosotros mismos, accedemos a la memoria y navegamos estados alterados de conciencia.<br/><br/>Su trabajo integra principios de neuroestética, estudios de la conciencia y diseño de experiencias inmersivas para crear vías medibles y no farmacológicas con énfasis en la seguridad, la personalización y la aplicabilidad clínica.',
+    'adv-label':'Red asesora',
+    'adv1-bio':'Investigador en psicología y estudios de la conciencia con especial enfoque en estados alterados, psicodélicos y experiencias anómalas. Su trabajo explora la fenomenología y el potencial terapéutico de los estados no ordinarios.',
+    'adv2-bio':'Innovador de la conciencia y líder de producto especializado en detección neurofisiológica, sistemas de retroalimentación adaptativa y diseño de experiencias. Conferenciante sobre ética en neurotecnología y potencial humano.',
+    'adv3-bio':'Compositora acusmática y académica especializada en sonido inmersivo y espacial. Directora del Programa del MA en Música y Diseño de Sonido en la Universidad de Greenwich.',
+    'research-title':'Las bases<br/><em>de la investigación</em>',
+    'research-list':'<div class="ali">Experiencias de auto-trascendencia</div><div class="ali">Estados alterados inducidos por música</div><div class="ali">Sonido espacial e inmersivo</div><div class="ali">Prácticas clínicas de integración</div><div class="ali">Teoría ritual y neuroestética</div><div class="ali">Mecánica cuántica</div>',
+    'framework-title':'Un marco para<br/><em>navegar estados alterados.</em>',
+    'framework-col':'<h3 data-i18n="framework-title">Un marco para<br/><em>navegar estados alterados.</em></h3><p>Awe Field es una interfaz regulada hacia los estados alterados. Un campo de entrenamiento para la navegación de la conciencia. Un sistema de modulación clínica — no meramente una experiencia.</p><p>Nuestra misión: ampliar el acceso al trabajo terapéutico de orientación profunda y crear vías de perspectiva y transformación genuinamente asequibles.</p>',
+    'about-cta-h':'Listo para explorar<br/><em style="color:var(--gold2);">lo que Awe Field puede ofrecer?</em>',
+    'about-cta-btn':'Ponerse en Contacto',
+    'sci-label':'Base de evidencia','sci-title':'La ciencia detrás<br/><em>de Awe Field</em>',
+    'sci-sub':'Awe Field está fundamentado en investigación revisada por pares en musicoterapia, neurociencia de estados alterados, biofeedback de HRV y estudios de la conciencia.',
+    'sci-areas':'Áreas clave de investigación',
+    'sci1-cn':'Música y Estados Alterados','sci1-ct':'Cómo la música induce<br/><em>estados no ordinarios</em>',
+    'sci1-body':'La investigación de Kaelen et al. (2015, 2018) demuestra que la música es el principal motor de la experiencia subjetiva en la terapia psicodélica — incluyendo el avance emocional, la imaginería y la inabarcabilidad oceánica. Los estados alterados evocados por música comparten firmas neurales con los inducidos farmacológicamente.',
+    'sci2-cn':'HRV y Estado Autonómico','sci2-ct':'Variabilidad de la Frecuencia Cardíaca<br/><em>como ventana clínica</em>',
+    'sci2-body':'Thayer et al. (2012) establecieron el HRV como proxy validado de la flexibilidad del sistema nervioso autónomo — directamente vinculado a la regulación emocional, la flexibilidad cognitiva y la disposición terapéutica. El HRV en tiempo real permite la modulación adaptativa de la profundidad de la sesión y el ritmo de integración.',
+    'sci3-cn':'PTSD y Terapia de Sonido','sci3-ct':'Intervención acústica<br/><em>para el procesamiento del trauma</em>',
+    'sci3-body':'Una revisión Cochrane (Bradt &amp; Dileo, 2010) de 26 estudios encontró que la musicoterapia produjo reducciones significativas en la gravedad de los síntomas de PTSD, ansiedad y depresión. Las intervenciones basadas en sonido acceden a la memoria somática a través de vías pre-verbales eludidas por los enfoques cognitivos estándar.',
+    'sci4-cn':'Lenguaje e Integración','sci4-ct':'Cambio semántico como<br/><em>medida de resultado</em>',
+    'sci4-body':'El marco LIWC de Pennebaker (décadas de investigación) muestra que los cambios lingüísticos — del tiempo pasado al presente, de la evitación a la encarnación — son predictores fiables de la integración terapéutica. La capa de PLN de Awe Field rastrea esta evolución a lo largo del programa.',
+    'sci-maxim':'Awe Field es una síntesis de ciencia clínica establecida — no un experimento de nueva era, sino una aplicación estructurada de mecanismos revisados por pares.',
+    'mus-label':'Música y Diseño de Sonido','mus-title':'Una arquitectura sónica<br/><em>curada y adaptativa</em>',
+    'mus-sub':'El protocolo de Awe Field utiliza múltiples enfoques musicales y acústicos — cada uno seleccionado por su capacidad de guiar cambios en la percepción, la emoción y el estado fisiológico.',
+    'mus-approaches':'Los enfoques sónicos',
+    'mus-grid':'<div class="mugc"><h3>Composiciones Ambient y Minimalistas</h3><p>Para la regulación del sistema nervioso y el arraigo — un contenedor acústico estable desde el cual se hacen accesibles estados más profundos.</p></div><div class="mugc"><h3>Texturas Psicoacústicas</h3><p>Para influir en la percepción espacial y el enfoque interno. Sonido que opera por debajo del nivel de atención consciente.</p></div><div class="mugc"><h3>Sincronización Rítmica</h3><p>Para apoyar las transiciones de estado y el procesamiento emocional. El tempo y el ritmo como herramientas fisiológicas calibradas para la fase específica del viaje.</p></div><div class="mugc"><h3>Estructuras Armónicas y Tonales</h3><p>Diseñadas para evocar tensión, liberación y resolución — moviendo material emocional sin requerir narrativa.</p></div><div class="mugc"><h3>Paisajes Sonoros Dinámicos</h3><p>Que evolucionan en respuesta al estado fisiológico del oyente. El sonido como guía principal a través de diferentes profundidades de experiencia.</p></div><div class="mugc"><h3>Sonido Espacial e Inmersivo</h3><p>Basado en la composición electroacústica y la difusión. La dimensión espacial del sonido como herramienta terapéutica.</p></div>',
+    'mus-tgl':'"No buscamos pistas.<br/>Buscamos estados,<br/>traducidos en sonido."',
+    'mus-artists':'Si eres músico, compositor o artista del sonido que trabaja con música capaz de evocar estados alterados, nos encantaría saber de ti.<br/><br/>Estamos construyendo una biblioteca curada que prioriza la profundidad sobre la estimulación, la intención sobre el género y el impacto emocional sobre la forma.',
+    'mus-submit':'Enviar Tu Trabajo',
+    'mus-demo-p':'Experimenta cómo funciona la arquitectura sónica curada de Awe Field en un contexto clínico en vivo.',
+    'lic-label':'Licencias','lic-title':'Awe Field como herramienta clínica<br/><em>para tu práctica</em>',
+    'lic-sub':'Ofrecido como herramienta clínica para profesionales y organizaciones con licencia. Todas las licencias incluyen incorporación estructurada para garantizar un uso seguro y efectivo del protocolo.',
+    'lic-grid':'<div class="licc"><h3>Licencia para <em>Profesionales</em></h3><p>Acceso completo a la plataforma — gestión de pacientes, entrega de sesiones y herramientas de integración.</p><div class="licl"><div class="licli">Acceso completo a la plataforma</div><div class="licli">Panel de gestión de pacientes</div><div class="licli">Herramientas de entrega de sesiones</div><div class="licli">Guía de integración con IA</div><div class="licli">Integración de wearable HRV</div><div class="licli">Informes clínicos</div></div></div><div class="licc"><h3>Licencia Clínica &amp; <em>Institucional</em></h3><p>Entornos multiusuario para clínicas, retiros y proveedores de salud.</p><div class="licl"><div class="licli">Cuentas multiprofesional</div><div class="licli">Entrega de sesiones grupales</div><div class="licli">Círculos de integración comunitarios</div><div class="licli">Informes institucionales</div><div class="licli">Compatible con NHS y clínicas</div><div class="licli">Incorporación personalizada</div></div></div><div class="licc"><h3>Formación &amp; <em>Incorporación</em></h3><p>Incorporación estructurada en todos los niveles de la organización.</p><div class="licl"><div class="licli">Formación en el marco clínico</div><div class="licli">Evaluación de seguridad y contraindicaciones</div><div class="licli">Formación en facilitación de integración</div><div class="licli">Apoyo continuo al profesional</div></div></div>',
+    'eab-title':'Programa de <em>Acceso Anticipado</em>',
+    'eab-body':'Awe Field está actualmente en desarrollo. Estamos incorporando un número limitado de clínicos para pruebas piloto a una tarifa de lanzamiento reducida.',
+    'eab-list':'<div class="eali">Apoyo directo del equipo fundador</div><div class="eali">Influencia directa en el desarrollo del producto</div><div class="eali">Precios de acceso anticipado</div><div class="eali">Acceso prioritario a futuras herramientas clínicas</div>',
+    'eab-btn':'Unirse a Nuestro Programa de Acceso Anticipado',
+    'pdf-title':'PDF del Protocolo',
+    'pdf-list':'<div class="pdfli">Evaluación de entrada y preparación del paciente</div><div class="pdfli">Lógica de personalización y selección de vía</div><div class="pdfli">Arquitectura de sesión — inducción, pico, integración</div><div class="pdfli">Integración de HRV y modulación sónica adaptativa</div><div class="pdfli">Modelo de integración guiada por IA en 5 dimensiones</div><div class="pdfli">Estructura de medición clínica e informes</div><div class="pdfli">Consideraciones de seguridad y guías para profesionales</div>',
+    'pdf-btn':'Solicitar Acceso',
+    'ev-label':'Eventos','ev-title':'Dónde puedes<br/><em>experimentar Awe Field</em>',
+    'ev-sub':'Demostraciones en vivo, talleres clínicos y sesiones inmersivas para profesionales. Experimenta el protocolo de primera mano y habla directamente con el equipo fundador.',
+    'events-grid':'<div class="event-card"><div class="event-date">Próximamente · Londres</div><div class="event-title">Demostración Clínica — Cohorte Fundadora</div><div class="event-loc">Ubicación por confirmar · Londres</div><div class="event-body">Una demostración íntima del protocolo completo de Awe Field para un grupo selecto de clínicos. Incluye monitoreo de HRV en vivo, sesión guiada y círculo de integración. Seguido de preguntas y respuestas con el equipo fundador.</div></div><div class="event-card"><div class="event-date">Próximamente · Internacional</div><div class="event-title">Serie de Talleres para Profesionales</div><div class="event-loc">Online y Presencial</div><div class="event-body">Formación estructurada que cubre la evaluación de contraindicaciones, la entrega de sesiones, la facilitación de integración y los informes clínicos.</div></div><div class="event-card"><div class="event-date">En curso · Online</div><div class="event-title">Llamadas de Colaboración Investigadora</div><div class="event-loc">Videollamada</div><div class="event-body">Llamadas mensuales para investigadores y clínicos interesados en contribuir a la base de evidencia en curso de Awe Field.</div></div><div class="event-card"><div class="event-date">Mantente informado</div><div class="event-title">Únete a la Lista de Correo</div><div class="event-loc">Awe Field · División Clínica</div><div class="event-body">Sé el primero en conocer los próximos eventos, aperturas de programas piloto y nuevos desarrollos del protocolo.</div></div>',
+    'ev-reg-btn':'Registrar Interés en Eventos',
+    'footer-protocol':'Protocolo','footer-about':'Nosotros','footer-music':'Música',
+    'footer-licensing':'Licencias','footer-events':'Eventos','footer-contact':'Contacto',
+    'footer-copy':'© 2026 Awe Field · División Clínica · Todos los derechos reservados',
+    'footer-love':'Creado con amor',
+    'sd1':'<div class="detail">Escala de resiliencia validada + puntuación ASC</div><div class="detail">Resultado: nivel de preparación + vía de protocolo recomendada</div>',
+    'sd2':'<div class="detail">Vías: Descanso Profundo · Conciencia Expandida · Flujo Creativo · Procesamiento Emocional · Claridad</div>',
+    'sd3':'<div class="detail">Estado de ánimo pre-sesión + viaje personalizado + datos de HRV</div>',
+    'sd4':'<div class="detail">Sesión completamente grabada — accesible para paciente y clínico</div>',
+    'sd5':'<div class="detail">Trayectoria de HRV por sesión</div><div class="detail">Patrón lingüístico y alineación de intención</div><div class="detail">Delta de escala de resiliencia</div><div class="detail">Mapeo biométrico de momentos pico</div><div class="detail">Recomendación de vía de continuación</div><div class="detail">Compatible RGPD · PDF exportable</div>',
+    'framework-col':'<h3 data-i18n="framework-title">Un marco para<br/><em>navegar estados alterados.</em></h3><p>Awe Field es una interfaz regulada hacia los estados alterados. Un campo de entrenamiento para la navegación de la conciencia. Un sistema de modulación clínica — no meramente una experiencia.</p><p>Nuestra misión: ampliar el acceso al trabajo terapéutico de orientación profunda y crear vías de perspectiva y transformación genuinamente asequibles.</p>',
+    'pdf-desc':'Un documento completo que describe el marco de extremo a extremo para clínicos que desean entender cómo se integra Awe Field en su práctica existente.',
+    'pdflk':'⬤ &nbsp; Disponible para profesionales con licencia bajo suscripción',
+    'cdl-email':'Correo','cdl-location':'Ubicación','cdl-programmes':'Programas',
+    'cdv-location':'Londres · Disponible internacionalmente',
+    'cdv-programmes':'Asociaciones clínicas · Programas piloto · Cohorte de acceso anticipado',
+    'con-ph-name':'Dra. Ana García','con-ph-email':'ana@clinica.com',
+    'con-ph-msg':'Cuéntanos sobre tu práctica y qué esperas explorar con Awe Field...',
+    'con-nl-h3':'Investigación, perspectivas &amp;<br/><em style="color:var(--gold2);font-style:italic;">y anuncios de acceso anticipado</em>',
+    'con-nl-p':'Únete a profesionales que siguen la frontera de la terapia de estados alterados.<br/>Sin ruido — solo lo que importa.',
+    'con-nl-note':'Sin spam · Cancela en cualquier momento',
+    'role-select':'<option value="">Selecciona tu rol</option><option>Psicoterapeuta</option><option>Psiquiatra</option><option>Proveedor de terapia asistida con psicodélicos</option><option>Facilitador de retiros / ceremonias</option><option>Investigador clínico</option><option>Profesional del bienestar</option><option>NHS / salud mental comunitaria</option><option>Músico / artista del sonido</option><option>Otro</option>',
+    'int-select':'<option value="">Selecciona tu interés</option><option>Solicitud de demo clínica</option><option>Acceso anticipado / cohorte fundadora</option><option>Integración de retiro o ceremonia</option><option>Colaboración investigadora</option><option>Colaboración musical / diseño de sonido</option><option>Licencia institucional / clínica</option><option>Eventos</option><option>Consulta general</option>',
+    'con-who':'<div class="cwhi">Clínico, psiquiatra o proveedor de medicina psicodélica</div><div class="cwhi">Facilitador de retiro o ceremonia que explora trabajo profundo sin sustancias</div><div class="cwhi">Profesional del bienestar o integrativo</div><div class="cwhi">Investigador de la conciencia o académico</div><div class="cwhi">Músico o artista del sonido interesado en colaborar</div>',
+  }
+};
+function applyLang(lang){
+  const t=TRANS[lang];
+  // 1. Legacy span id approach (i18n-KEY)
+  function set(id,html){const el=document.getElementById('i18n-'+id);if(el)el.innerHTML=html;}
+  Object.keys(t).forEach(k=>set(k,t[k]));
+  // 2. data-i18n attributes
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.getAttribute('data-i18n');
+    if(t[key]!==undefined)el.innerHTML=t[key];
+  });
+  // 3. data-i18n-placeholder attributes
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+    const key=el.getAttribute('data-i18n-placeholder');
+    if(t[key]!==undefined)el.placeholder=t[key];
+  });
+  // 4. Container innerHTML replacements (grids, tables, lists)
+  const containers={
+    'pos-table':'pos-table','mus-grid':'mus-grid','lic-grid':'lic-grid',
+    'events-grid':'events-grid','eab-list':'eab-list','pdf-list':'pdf-list',
+    'con-who':'con-who','research-list':'research-list',
+    'sd1':'sd1','sd2':'sd2','sd3':'sd3','sd4':'sd4','sd5':'sd5',
+    'framework-col':'framework-col'
+  };
+  Object.entries(containers).forEach(([key,id])=>{
+    const el=document.getElementById(id);
+    if(el&&t[key]!==undefined)el.innerHTML=t[key];
+  });
+  // 5. data-i18n-select (form selects)
+  document.querySelectorAll('[data-i18n-select]').forEach(el=>{
+    const key=el.getAttribute('data-i18n-select').replace('-select','');
+    const transKey=key+'-select';
+    if(t[transKey]!==undefined)el.innerHTML=t[transKey];
+  });
+  // 6. Nav button labels
+  const navMap={'protocol':'nav-protocol','about':'nav-about','science':'nav-science',
+    'music':'nav-music','licensing':'nav-licensing','events':'nav-events','contact':'nav-contact'};
+  document.querySelectorAll('.nl:not(.nl-cta):not(.home-btn)').forEach(btn=>{
+    const onclick=btn.getAttribute('onclick')||'';
+    for(const[view,key] of Object.entries(navMap)){
+      if(onclick.includes("'"+view+"'")){btn.textContent=t[key];break;}
+    }
+  });
+  // 7. Re-render open FOR panel in new language
+  if(activeFor>=0){
+    const det=document.getElementById('for-detail-'+activeFor);
+    if(det&&det.innerHTML){
+      const inner=renderForPanel(activeFor);
+      det.innerHTML='';det.appendChild(inner);
+    }
+  }
+}
+function toggleLang(){
+  currentLang=currentLang==='en'?'es':'en';
+  document.getElementById('lang-btn').textContent=currentLang==='en'?'ES':'EN';
+  document.getElementById('lang-btn').title=currentLang==='en'?'Traducir al español':'Translate to English';
+  applyLang(currentLang);
+}
+</script>
+</body>
+</html>
